@@ -58,52 +58,53 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services List */}
+      {/* Services Grid */}
       <section className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 perspective-1000">
           {allServices.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="w-full flex flex-col lg:flex-row bg-[#11131A] border border-white/5 rounded-3xl overflow-hidden p-6 md:p-10 gap-8 lg:gap-12 items-stretch transition-colors hover:border-white/10 shadow-2xl shadow-black/50"
+              initial={{ opacity: 0, y: 50, rotateX: 10, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
+              whileHover={{ scale: 1.03, rotateX: 2, rotateY: -2, z: 20 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
+              style={{ transformStyle: "preserve-3d" }}
+              className="h-full"
             >
-              {/* Left Column */}
-              <div className="flex-1 flex flex-col justify-center">
-                <div className="mb-6 bg-[#1A1D27] w-14 h-14 flex items-center justify-center rounded-2xl border border-white/5">
-                  {service.icon}
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                  {service.title}
-                </h2>
-                <p className="text-[#8892B0] text-lg mb-8 leading-relaxed max-w-2xl">
-                  {service.description}
-                </p>
-
-                <Link href={service.href} className="w-fit mt-auto">
-                  <div className="inline-flex items-center gap-2 bg-transparent border border-white/20 hover:bg-white/5 text-white transition-all duration-300 rounded-xl px-6 h-12 text-sm font-medium">
-                    Explore this service <ArrowRight size={16} />
-                  </div>
-                </Link>
-              </div>
-
-              {/* Right Column */}
-              <div className="flex-1 bg-[#0A0B0F] rounded-2xl p-6 md:p-8 border border-white/5 flex flex-col justify-center relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                
-                <h3 className="text-lg font-bold mb-6 text-white relative z-10">
-                  Key Features Included
-                </h3>
-                <ul className="space-y-4 relative z-10">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
-                      <span className="text-white font-medium text-base">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+              <Link href={service.href} className="block h-full group">
+                <Card className="h-full flex flex-col overflow-hidden border border-white/10 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:border-primary/50 hover:shadow-[0_15px_40px_rgba(var(--primary),0.2)] transition-all duration-500 relative">
+                  <div className="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/20 transition-colors duration-500" />
+                  
+                  <CardContent className="p-8 md:p-10 flex flex-col flex-grow relative z-10">
+                    <div className="mb-6 bg-primary/10 w-16 h-16 flex items-center justify-center rounded-2xl border border-primary/20 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                      {service.icon}
+                    </div>
+                    
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white group-hover:text-primary transition-colors">
+                      {service.title}
+                    </h2>
+                    
+                    <p className="text-muted-foreground text-lg mb-8 leading-relaxed flex-grow">
+                      {service.description}
+                    </p>
+                    
+                    <ul className="space-y-3 mb-8">
+                      {service.features.map((feature, fIndex) => (
+                        <li key={fIndex} className="flex items-start">
+                          <CheckCircle2 className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                          <span className="text-base text-foreground/90">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <div className="mt-auto flex items-center text-primary font-medium group-hover:translate-x-2 transition-transform duration-300">
+                      Explore this service <ArrowRight className="ml-2 w-5 h-5" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </section>
