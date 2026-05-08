@@ -197,5 +197,71 @@ export const projects = [
     role: "Lead Developer / Custom E-commerce Specialist",
     stack: ["WordPress", "WooCommerce (Highly Customized)", "JavaScript", "PHP"],
     link: "https://razvape.us/"
+  },
+  {
+    title: "Juicy Bar Flavor – E-Commerce & Flavor Showcase (USA)",
+    description: "Developed a fully customized digital storefront for Juicy Bar Flavor, focusing specifically on the brand's expansive flavor portfolio. The project was designed to provide an immersive, flavor-first shopping experience, utilizing high-end visuals and a bespoke interface to drive engagement in the competitive US vaping market.",
+    keySolutions: [
+      "Flavor-Centric UI Design: Created a vibrant, high-impact user interface that uses color-coded navigation and custom iconography to help users distinguish between dozens of unique flavor profiles instantly.",
+      "Bespoke Product Displays: Built custom-coded product modules that highlight specific device features (like puff counts and battery indicators) alongside detailed flavor descriptions.",
+      "Streamlined Mobile Shopping: Optimized the entire user journey for mobile devices, ensuring high-resolution graphics load rapidly without compromising site performance.",
+      "Compliance & Age Verification: Integrated industry-standard US age-gating and legal disclaimers to ensure the platform meets all federal and state-level regulatory requirements.",
+      "Advanced AJAX Interactivity: Implemented smooth transitions and instant-loading elements to provide a 'premium app' feel within a standard web browser."
+    ],
+    role: "Lead Developer / Custom UI Architect",
+    stack: ["WordPress", "WooCommerce (Highly Customized)", "PHP", "JavaScript"],
+    link: "https://juicybarflavor.com/"
+  },
+  {
+    title: "Top Disposable Vapes – Multi Brand Vapes Marketplace (USA)",
+    description: "Developed a high-volume, multi-brand e-commerce marketplace focused on the top-tier disposable vaping segment in the US. The platform serves as a centralized hub for various industry-leading brands, requiring a robust architecture capable of handling diverse product lines and heavy consumer traffic.",
+    keySolutions: [
+      "Dynamic Multi-Brand Architecture: Engineered a scalable catalog system to manage multiple different brands under one storefront, ensuring each brand's unique attributes (puff counts, battery specs, and flavor lists) are clearly organized.",
+      "Streamlined Bulk Management: Implemented a backend system that allows for rapid updates to prices and stock levels across hundreds of product variations, essential for the fast-moving disposable vape industry.",
+      "Regulatory Compliance Integration: Integrated US-standard age verification and specialized shipping logic to comply with PACT Act requirements and other federal nicotine sales regulations.",
+      "Conversion-Focused UI: Designed an interface that prioritizes 'Best Sellers' and 'Trending' products, using social proof and clear CTA elements to guide users to the most popular items."
+    ],
+    role: "Lead Developer / E-commerce Architect",
+    stack: ["WordPress", "WooCommerce", "PHP", "Custom SEO Framework"],
+    link: "https://topdisposablevapes.com/"
+  },
+  {
+    title: "Butterfly Kratom Co. – Premium Botanical (USA)",
+    description: "Developed a high-end, high-trust e-commerce platform for Butterfly Kratom Co., a US-based provider of premium botanical supplements. Navigating the unique challenges of the kratom industry, the project focused on balancing an organic, wellness-centered aesthetic with the rigorous technical requirements of high-risk retail.",
+    keySolutions: [
+      "High-Risk Payment Architecture: Successfully integrated specialized payment gateways compatible with the botanical supplement industry, ensuring secure and uninterrupted transaction processing where standard providers often fail.",
+      "Lab-Transparency Integration: Developed a dedicated system for displaying Certificates of Analysis (COAs) and lab-test results, a critical feature for building consumer trust and ensuring product safety in the wellness market.",
+      "Strain-Based Navigation: Engineered a clean, intuitive catalog categorized by 'Vein Colors' (Red, White, Green) and product formats (Powder, Capsules), allowing users to easily find products based on their specific wellness goals.",
+      "Regulatory Compliance & Age Gating: Implemented robust US-compliant age verification and localized shipping restrictions to ensure the platform adheres to varying state and local regulations."
+    ],
+    role: "Lead Developer / E-commerce Architect",
+    stack: ["WordPress", "WooCommerce", "High-Risk Gateway Integration", "Custom CSS"],
+    link: "https://butterflykratomco.com/"
+  },
+  {
+    title: "Vape Made In USA – Premium American Vaping Marketplace",
+    description: "Developed a high-performance e-commerce platform for Vape Made In USA, a digital storefront dedicated to premium vaping products. The project's core objective was to create a patriotic, high-trust brand identity that emphasizes quality and domestic standards while providing a seamless shopping experience for the American consumer.",
+    keySolutions: [
+      "Brand-Centric UI/UX: Designed a bold, 'Made in USA' themed interface that utilizes patriotic elements and clean layouts to build immediate trust and brand loyalty with domestic buyers.",
+      "Streamlined Catalog Management: Engineered a structured product hierarchy to manage a diverse inventory of disposable vapes, e-liquids, and hardware, ensuring users can navigate by brand or puff count with ease.",
+      "Regulatory Compliance Integration: Implemented mandatory US-standard age verification and specialized shipping logic to ensure the platform remains fully compliant with federal and state-level nicotine sales regulations.",
+      "Conversion-Optimized Checkout: Developed a fast, multi-step checkout process designed to reduce cart abandonment, specifically optimized for mobile users who make up the majority of the US vaping market."
+    ],
+    role: "Lead Developer / E-commerce Architect",
+    stack: ["WordPress", "WooCommerce", "PHP", "Custom CSS"],
+    link: "https://vapemadeinusa.com/"
+  },
+  {
+    title: "Frutti Bar Vapes – Premium Disposable Vaping Store (USA)",
+    description: "Developed a high-energy, flavor-focused e-commerce platform for Frutti Bar Vapes, a brand specializing in fruit-inspired disposable vaping devices. The project aimed to create a vibrant, 'fresh' digital identity that mirrors the brand's flavor profiles while providing a high-speed shopping experience for the American market.",
+    keySolutions: [
+      "Vibrant Visual Identity: Crafted a custom UI using a bright, fruit-themed color palette and high-definition product imagery to create an immersive brand experience that appeals to flavor-conscious consumers.",
+      "Streamlined Flavor Navigation: Developed an intuitive 'Flavor-First' navigation system, allowing users to quickly browse by specific taste categories (e.g., Tropical, Berries, Mint) alongside standard product specs.",
+      "Compliance & Legal Integration: Implemented mandatory US-standard age-gating and legal disclaimers, ensuring the site meets all FDA and state-level regulatory requirements for nicotine sales.",
+      "Mobile-Optimized Conversions: Engineered a lightweight, mobile-first interface designed for rapid browsing and 'one-click' style purchasing, essential for the mobile-dominant US vaping demographic."
+    ],
+    role: "Lead Developer / E-commerce Architect",
+    stack: ["WordPress", "WooCommerce", "Custom CSS", "PHP"],
+    link: "https://fruttibarvapes.com/"
   }
 ];
