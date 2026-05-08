@@ -184,17 +184,6 @@ export default function Home() {
               {/* High-Tech Grid Overlay */}
               <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000_60%,transparent_100%)] opacity-50 pointer-events-none" />
               
-              {/* Fake System Output */}
-              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between z-20 pointer-events-none">
-                <div className="flex gap-2">
-                  <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                  <div className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse delay-75" />
-                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse delay-150" />
-                </div>
-                <div className="text-[10px] font-mono text-primary/80 tracking-widest uppercase">
-                  Nexus.Core // Online
-                </div>
-              </div>
             </motion.div>
           </motion.div>
         </div>
