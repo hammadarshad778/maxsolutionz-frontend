@@ -141,15 +141,15 @@ export default function Home() {
                   transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute inset-0 m-auto w-40 h-40 md:w-48 md:h-48 bg-blue-900/40 border-[3px] border-blue-500 shadow-[0_0_60px_rgba(59,130,246,0.6)] rounded-full flex items-center justify-center z-10 overflow-hidden"
                 >
-                  {/* Digital Grid inside globe */}
-                  <div className="absolute inset-0 rounded-full border border-blue-400/30" style={{ transform: "rotateX(65deg)" }} />
-                  <div className="absolute inset-0 rounded-full border border-blue-400/30" style={{ transform: "rotateX(65deg) rotateY(60deg)" }} />
-                  <div className="absolute inset-0 rounded-full border border-blue-400/30" style={{ transform: "rotateX(65deg) rotateY(-60deg)" }} />
-                  <div className="absolute inset-0 rounded-full border border-blue-400/30" style={{ transform: "rotateX(65deg) rotateY(90deg)" }} />
-                  
-                  {/* Inner glowing core */}
-                  <div className="absolute inset-0 m-auto w-16 h-16 bg-blue-400 rounded-full blur-xl animate-pulse" />
-                  <Globe2 className="w-20 h-20 text-white relative z-20 drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]" />
+                  <Image 
+                    src="/tech-world.png" 
+                    alt="Digital Technology World" 
+                    fill 
+                    className="object-cover scale-[1.3]" 
+                    priority
+                  />
+                  {/* Overlay to blend image into the theme */}
+                  <div className="absolute inset-0 bg-blue-500/20 mix-blend-overlay rounded-full pointer-events-none" />
                 </motion.div>
 
                 {/* The Arch (Semi Circle) */}
