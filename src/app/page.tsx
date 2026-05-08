@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, Code2, LineChart, Search, ShoppingCart, Users, Globe2, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Code2, LineChart, Search, ShoppingCart, Users, Globe2, ShieldCheck, CheckCircle2, Layout, Smartphone, Database, Cloud } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { faqs, generateFAQSchema } from "@/data/faqs";
@@ -132,48 +132,73 @@ export default function Home() {
               className="relative w-full aspect-square md:aspect-auto md:h-[500px] rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(var(--primary),0.3)] transform-gpu group cursor-pointer flex items-center justify-center bg-gradient-to-r from-[#05060A] via-primary/20 to-[#05060A] bg-[length:200%_200%]"
               style={{ transformStyle: "preserve-3d" }}
             >
-              {/* Abstract 3D Data Core with Color Animation */}
-              <motion.div 
-                className="relative w-56 h-56 md:w-72 md:h-72 flex items-center justify-center" 
-                style={{ transformStyle: "preserve-3d" }}
-                animate={{ filter: ["hue-rotate(0deg)", "hue-rotate(360deg)"] }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              >
-                {/* Deep Background Glow */}
+              {/* Technology World Structure */}
+              <div className="relative w-[280px] h-[280px] md:w-[340px] md:h-[340px] flex items-center justify-center mt-12">
+                
+                {/* Central Massive Glowing Globe */}
                 <motion.div
-                  animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-0 m-auto w-32 h-32 bg-primary/60 rounded-full blur-3xl pointer-events-none"
-                />
+                  animate={{ scale: [1, 1.05, 1], filter: ["hue-rotate(0deg)", "hue-rotate(360deg)"] }}
+                  transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-0 m-auto w-40 h-40 md:w-48 md:h-48 bg-blue-900/40 border-[3px] border-blue-500 shadow-[0_0_60px_rgba(59,130,246,0.6)] rounded-full flex items-center justify-center z-10 overflow-hidden"
+                >
+                  {/* Digital Grid inside globe */}
+                  <div className="absolute inset-0 rounded-full border border-blue-400/30" style={{ transform: "rotateX(65deg)" }} />
+                  <div className="absolute inset-0 rounded-full border border-blue-400/30" style={{ transform: "rotateX(65deg) rotateY(60deg)" }} />
+                  <div className="absolute inset-0 rounded-full border border-blue-400/30" style={{ transform: "rotateX(65deg) rotateY(-60deg)" }} />
+                  <div className="absolute inset-0 rounded-full border border-blue-400/30" style={{ transform: "rotateX(65deg) rotateY(90deg)" }} />
+                  
+                  {/* Inner glowing core */}
+                  <div className="absolute inset-0 m-auto w-16 h-16 bg-blue-400 rounded-full blur-xl animate-pulse" />
+                  <Globe2 className="w-20 h-20 text-white relative z-20 drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]" />
+                </motion.div>
 
-                {/* Inner Bright Orb */}
-                <motion.div
-                  animate={{ scale: [1, 1.1, 1], opacity: [0.8, 1, 0.8] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  className="absolute inset-0 m-auto w-8 h-8 bg-white rounded-full shadow-[0_0_40px_#fff]"
-                />
+                {/* The Arch (Semi Circle) */}
+                <div className="absolute inset-0 rounded-full border-[2px] border-t-blue-500/40 border-l-blue-500/40 border-r-blue-500/40 border-b-transparent border-dashed -mt-16" />
 
-                {/* Rotating Geometric Rings (The 'Core') */}
-                {[...Array(6)].map((_, i) => (
-                  <motion.div
+                {/* Orbiting Service Icons */}
+                {[
+                  { icon: <Search className="w-6 h-6 text-cyan-400" />, angle: -90, label: "SEO" },
+                  { icon: <Layout className="w-6 h-6 text-green-400" />, angle: -45, label: "Design" },
+                  { icon: <Code2 className="w-6 h-6 text-blue-400" />, angle: 0, label: "Web Dev" },
+                  { icon: <ShoppingCart className="w-6 h-6 text-purple-400" />, angle: 45, label: "E-Comm" },
+                  { icon: <LineChart className="w-6 h-6 text-pink-400" />, angle: 90, label: "Growth" },
+                ].map((item, i) => (
+                  <div
                     key={i}
-                    className="absolute inset-0 m-auto w-full h-full border border-primary/40 rounded-full"
-                    style={{
-                      rotateZ: i * 30,
-                      transformStyle: "preserve-3d"
-                    }}
-                    animate={{
-                      rotateX: [0, 360],
-                      rotateY: [0, 360],
-                    }}
-                    transition={{
-                      duration: 12 + i * 2,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                  />
+                    className="absolute inset-0 -mt-16"
+                    style={{ transform: `rotate(${item.angle}deg)` }}
+                  >
+                    {/* The Icon Container */}
+                    <motion.div 
+                      className="absolute top-0 left-1/2 -ml-7 -mt-7 w-14 h-14 bg-[#05060A] border-[2px] border-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.6)] rounded-full flex items-center justify-center z-20 cursor-pointer group"
+                      style={{ transform: `rotate(${-item.angle}deg)` }}
+                      whileHover={{ scale: 1.15, backgroundColor: "rgba(59,130,246,0.2)" }}
+                    >
+                      {item.icon}
+                      
+                      {/* Tooltip */}
+                      <div className="absolute -bottom-8 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-xs font-bold text-white bg-blue-900/80 px-2 py-1 rounded border border-blue-500/50 pointer-events-none">
+                        {item.label}
+                      </div>
+                    </motion.div>
+
+                    {/* Connecting line to center */}
+                    <motion.div 
+                      className="absolute top-7 left-1/2 w-[2px] h-[calc(50%-5rem)] md:h-[calc(50%-6rem)] origin-top"
+                      style={{ background: "linear-gradient(to bottom, rgba(59,130,246,0.8), transparent)" }}
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: i * 0.4 }}
+                    />
+                    
+                    {/* Moving pulse along the line */}
+                    <motion.div 
+                      className="absolute left-1/2 w-1.5 h-4 bg-white rounded-full blur-[1px] -ml-[3px]"
+                      animate={{ top: ["28px", "calc(50% - 4rem)"] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: i * 0.4, ease: "linear" }}
+                    />
+                  </div>
                 ))}
-              </motion.div>
+              </div>
 
               {/* High-Tech Grid Overlay */}
               <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000_60%,transparent_100%)] opacity-50 pointer-events-none" />
