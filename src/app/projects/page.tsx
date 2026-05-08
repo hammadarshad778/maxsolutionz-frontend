@@ -88,7 +88,7 @@ export default function ProjectsPage() {
                             <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium w-fit mb-6">
                               {project.role}
                             </div>
-                            <h3 className="text-3xl font-bold mb-4">{project.title}</h3>
+                            <h3 className="text-3xl font-bold mb-4">{project.title.replace(/\s*\((USA|Germany|Pakistan|Ukraine|Europe|UK)\)$/, '')}</h3>
                             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                               {project.description}
                             </p>
