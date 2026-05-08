@@ -263,5 +263,18 @@ export const projects = [
     role: "Lead Developer / E-commerce Architect",
     stack: ["WordPress", "WooCommerce", "Custom CSS", "PHP"],
     link: "https://fruttibarvapes.com/"
+  },
+  {
+    title: "Smokers Heap – Premium Vaping & Smoking (USA)",
+    description: "Developed a high-volume e-commerce storefront for Smokers Heap, a leading US retailer specializing in advanced vaping technology, accessories, and alternative smoking products. The goal was to build a community-centric platform that balances a vast product catalog with a high-performance, secure shopping environment for tech-savvy consumers.",
+    keySolutions: [
+      "Dynamic Product Architecture: Engineered a sophisticated database structure to manage hundreds of SKUs, including complex variations for disposables (puff counts), hardware (wattage/coil types), and e-liquid flavor profiles.",
+      "Localized Logistics & Compliance: Integrated US-compliant age-gating systems and automated shipping calculators tailored to regional PACT Act requirements and tobacco tax laws.",
+      "Community-Focused UX: Designed a professional, 'enthusiast-first' interface that prioritizes transparency and product education, featuring detailed technical specs and usage guides for advanced hardware.",
+      "Performance & Scalability: Implemented enterprise-level caching and database optimization to ensure the site maintains rapid load times during high-traffic promotional periods and product launches."
+    ],
+    role: "Lead Developer / E-commerce Architect",
+    stack: ["WordPress", "WooCommerce", "PHP", "JavaScript"],
+    link: "https://smokersheap.com/"
   }
 ];
