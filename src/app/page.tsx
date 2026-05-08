@@ -106,22 +106,58 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, rotateY: -15 }}
+            initial={{ opacity: 0, scale: 0.8, rotateY: -20 }}
             animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-            transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
+            transition={{ delay: 0.3, duration: 1, type: "spring", stiffness: 50 }}
             className="relative lg:ml-auto w-full max-w-lg perspective-1000"
           >
-            <div className="absolute -inset-4 bg-gradient-to-tr from-primary to-blue-500 rounded-full blur-3xl opacity-20 animate-pulse" />
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-primary/20 bg-background/50 backdrop-blur-sm">
+            <div className="absolute -inset-4 bg-gradient-to-tr from-primary via-purple-500 to-blue-500 rounded-full blur-3xl opacity-30 animate-pulse" />
+            
+            <motion.div 
+              animate={{ y: [-10, 10, -10] }} 
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="relative rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(var(--primary),0.3)] bg-black/40 backdrop-blur-md transform-gpu"
+              style={{ transformStyle: "preserve-3d" }}
+            >
               <Image 
                 src="/hero.png" 
                 alt="E-commerce Web Development" 
                 width={800} 
                 height={600} 
-                className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
                 priority
               />
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent mix-blend-overlay" />
+            </motion.div>
+
+            {/* Floating UI Badges */}
+            <motion.div 
+              animate={{ y: [10, -10, 10], x: [0, 5, 0] }} 
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl shadow-2xl flex items-center gap-4 z-20"
+            >
+              <div className="bg-green-500/20 p-3 rounded-full border border-green-500/30">
+                <LineChart className="text-green-400 w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Conversion Rate</p>
+                <p className="text-xl font-extrabold text-white">+245%</p>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              animate={{ y: [-15, 15, -15], x: [0, -5, 0] }} 
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl shadow-2xl flex items-center gap-4 z-20"
+            >
+              <div className="bg-primary/20 p-3 rounded-full border border-primary/30">
+                <Code2 className="text-primary w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">System Uptime</p>
+                <p className="text-xl font-extrabold text-white">99.99%</p>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
