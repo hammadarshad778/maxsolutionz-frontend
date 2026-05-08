@@ -31,17 +31,18 @@ export default function ProjectsPage() {
 
       {/* Projects List */}
       <section className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-16 perspective-1000">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 80, rotateX: 15, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
+              whileHover={{ scale: 1.02, rotateX: 2, rotateY: -2, z: 20 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+              style={{ transformStyle: "preserve-3d" }}
             >
-              <Card className="overflow-hidden border-white/10 bg-white/5 backdrop-blur-sm shadow-xl shadow-black/20 hover:border-primary/30 transition-colors">
-                <CardContent className="p-0">
+              <Card className="overflow-hidden border border-white/10 bg-gradient-to-br from-white/10 to-transparent backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:border-primary/50 hover:shadow-[0_20px_50px_rgba(var(--primary),0.15)] transition-all duration-500 relative group">
                   <div className="grid md:grid-cols-12 gap-6 lg:gap-12 p-6 md:p-10">
                     <div className="md:col-span-12 lg:col-span-5 flex flex-col justify-center">
                       <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium w-fit mb-6">
@@ -58,15 +59,16 @@ export default function ProjectsPage() {
                           </span>
                         ))}
                       </div>
-                      <Button asChild size="lg" className="w-fit gap-2 shadow-lg hover:scale-105 transition-all">
+                      <Button asChild size="lg" className="w-fit gap-2 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-500 text-white shadow-lg shadow-primary/30 hover:shadow-primary/60 hover:scale-110 hover:-translate-y-1 transition-all duration-300 border-none">
                         <a href={project.link} target="_blank" rel="noopener noreferrer">
-                          View Live Site <ExternalLink size={18} />
+                          View Live Site <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                         </a>
                       </Button>
                     </div>
                     
-                    <div className="md:col-span-12 lg:col-span-7 bg-black/20 rounded-2xl p-6 md:p-8 border border-white/5">
-                      <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                    <div className="md:col-span-12 lg:col-span-7 bg-black/40 rounded-2xl p-6 md:p-8 border border-white/5 group-hover:bg-black/30 transition-colors duration-500 relative overflow-hidden">
+                      <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/20 transition-colors duration-500" />
+                      <h3 className="text-xl font-semibold mb-6 flex items-center gap-2 relative z-10">
                         Key Solutions Implemented
                       </h3>
                       <ul className="space-y-4">
