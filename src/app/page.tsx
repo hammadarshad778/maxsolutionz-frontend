@@ -91,18 +91,23 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
-                <Button size="lg" asChild className="w-full sm:w-auto h-14 px-8 text-lg group relative overflow-hidden shadow-[0_0_20px_rgba(var(--primary),0.3)]">
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto relative group">
+                {/* Button Glow Effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-blue-500 to-purple-500 rounded-xl blur-md opacity-40 group-hover:opacity-80 transition duration-500 group-hover:duration-200 animate-pulse" />
+                <Button size="lg" asChild className="w-full sm:w-auto h-14 px-8 text-lg relative bg-background border border-primary/30 hover:bg-primary/10 overflow-hidden">
                   <Link href="/services">
-                    <span className="relative z-10 flex items-center">
+                    {/* Sweeping Light Animation */}
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-[shimmer_1.5s_infinite]" />
+                    <span className="relative z-10 flex items-center text-white font-semibold">
                       Explore Services
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </Link>
                 </Button>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" asChild className="w-full sm:w-auto h-14 px-8 text-lg hover:bg-primary/5 transition-colors border-primary/20 hover:border-primary/50">
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto relative group">
+                <div className="absolute -inset-1 bg-white/5 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition duration-500" />
+                <Button size="lg" variant="outline" asChild className="w-full sm:w-auto h-14 px-8 text-lg border-primary/20 hover:border-primary/50 relative bg-background/50 backdrop-blur-sm text-gray-300 hover:text-white">
                   <Link href="/contact">Hire Experts</Link>
                 </Button>
               </motion.div>
@@ -118,32 +123,15 @@ export default function Home() {
             <div className="absolute -inset-4 bg-gradient-to-tr from-primary via-purple-500 to-blue-500 rounded-full blur-3xl opacity-30 animate-pulse" />
             
             <motion.div 
-              animate={{ y: [-10, 10, -10] }} 
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              animate={{ 
+                y: [-10, 10, -10],
+                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+              }} 
+              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
               whileHover={{ rotateX: 10, rotateY: -10, scale: 1.05 }}
-              className="relative w-full aspect-square md:aspect-auto md:h-[500px] rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(var(--primary),0.3)] bg-[#05060A] transform-gpu group cursor-pointer flex items-center justify-center"
+              className="relative w-full aspect-square md:aspect-auto md:h-[500px] rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(var(--primary),0.3)] transform-gpu group cursor-pointer flex items-center justify-center bg-gradient-to-r from-[#05060A] via-primary/20 to-[#05060A] bg-[length:200%_200%]"
               style={{ transformStyle: "preserve-3d" }}
             >
-              {/* Colorful Moving Background Blobs */}
-              <motion.div
-                animate={{
-                  x: ["0%", "30%", "-30%", "0%"],
-                  y: ["0%", "-30%", "30%", "0%"],
-                  scale: [1, 1.5, 1],
-                }}
-                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute w-64 h-64 bg-blue-600/30 rounded-full blur-[80px] pointer-events-none"
-              />
-              <motion.div
-                animate={{
-                  x: ["0%", "-30%", "30%", "0%"],
-                  y: ["0%", "30%", "-30%", "0%"],
-                  scale: [1.5, 1, 1.5],
-                }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute w-64 h-64 bg-purple-600/30 rounded-full blur-[80px] pointer-events-none"
-              />
-
               {/* Abstract 3D Data Core with Color Animation */}
               <motion.div 
                 className="relative w-56 h-56 md:w-72 md:h-72 flex items-center justify-center" 
@@ -185,24 +173,6 @@ export default function Home() {
                     }}
                   />
                 ))}
-
-                {/* Outer Orbiting Data Nodes */}
-                <motion.div 
-                  animate={{ rotateZ: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-[-40px] border border-dashed border-white/10 rounded-full pointer-events-none"
-                >
-                  <motion.div 
-                    animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute -top-2 left-1/2 w-4 h-4 bg-blue-500 rounded-full shadow-[0_0_15px_#3b82f6]"
-                  />
-                  <motion.div 
-                    animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
-                    transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                    className="absolute -bottom-2 right-1/4 w-3 h-3 bg-purple-500 rounded-full shadow-[0_0_15px_#a855f7]"
-                  />
-                </motion.div>
               </motion.div>
 
               {/* High-Tech Grid Overlay */}
