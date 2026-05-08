@@ -60,9 +60,12 @@ export default function ProjectsPage() {
                           </span>
                         ))}
                       </div>
-                      <Button asChild size="lg" className="w-fit gap-2 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-500 text-white shadow-lg shadow-primary/30 hover:shadow-primary/60 hover:scale-110 hover:-translate-y-1 transition-all duration-300 border-none">
+                      <Button asChild size="lg" className="w-fit gap-2 bg-transparent border-2 border-white/20 hover:border-primary text-foreground hover:text-primary shadow-none hover:shadow-[0_0_20px_rgba(var(--primary),0.3)] hover:scale-105 transition-all duration-300 relative overflow-hidden group">
                         <a href={project.link} target="_blank" rel="noopener noreferrer">
-                          View Live Site <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                          <div className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                          <span className="relative z-10 flex items-center gap-2">
+                            View Live Site <ExternalLink size={18} className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+                          </span>
                         </a>
                       </Button>
                     </div>
