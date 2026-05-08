@@ -11,28 +11,28 @@ const allServices = [
     description: "Bespoke, lightning-fast WordPress architectures designed for enterprise scalability, advanced security, and seamless content management.",
     icon: <MonitorSmartphone className="h-10 w-10 text-primary" />,
     features: ["Custom Theme & Plugin Development", "Core Web Vitals Optimization", "Headless WordPress Architectures", "Enterprise-Grade Security"],
-    href: "/contact"
+    href: "/services/wordpress-design"
   },
   {
     title: "Conversion-Focused WooCommerce Stores",
     description: "Data-driven e-commerce platforms engineered to minimize cart abandonment, maximize AOV, and provide frictionless shopping experiences.",
     icon: <ShoppingCart className="h-10 w-10 text-primary" />,
     features: ["High-Risk Payment Gateway Integration", "Dynamic Product Filtering & Search", "Automated Inventory Sync", "Mobile-First Checkout Flows"],
-    href: "/contact"
+    href: "/services/woocommerce-stores"
   },
   {
     title: "Strategic E-commerce Digitalization",
     description: "End-to-end digital transformation for retail brands, integrating analytics, CRM, and automation to scale operations globally.",
     icon: <BarChart3 className="h-10 w-10 text-primary" />,
     features: ["n8n & Zapier Workflow Automation", "Omnichannel Retail Strategy", "B2B Lead Generation Funnels", "Data Analytics & Reporting"],
-    href: "/contact"
+    href: "/services/ecommerce-digitalization"
   },
   {
     title: "Advanced Full-Stack Development",
     description: "Custom software solutions built with modern stacks (React, Next.js, Node.js) to solve complex business challenges with robust APIs.",
     icon: <Layers className="h-10 w-10 text-primary" />,
     features: ["Next.js & React Frontend Apps", "Scalable Node.js Backend APIs", "Database Architecture (SQL/NoSQL)", "Cloud Deployment & DevOps"],
-    href: "/contact"
+    href: "/services/fullstack-development"
   }
 ];
 
@@ -87,7 +87,7 @@ export default function ServicesPage() {
                         <div className="inline-flex items-center gap-2 bg-transparent border-2 border-white/20 hover:border-primary text-foreground hover:text-primary shadow-none hover:shadow-[0_0_20px_rgba(var(--primary),0.3)] hover:scale-105 transition-all duration-300 rounded-md px-8 h-12 text-base font-medium relative overflow-hidden group/btn">
                           <div className="absolute inset-0 bg-primary/10 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-out" />
                           <span className="relative z-10 flex items-center gap-2">
-                            Discuss this service <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
+                            Explore this service <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
                           </span>
                         </div>
                       </Link>
