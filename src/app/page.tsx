@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, Code2, LineChart, Search, ShoppingCart, Users, Globe2, ShieldCheck } from "lucide-react";
+import { ArrowRight, Code2, LineChart, Search, ShoppingCart, Users, Globe2, ShieldCheck, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { faqs, generateFAQSchema } from "@/data/faqs";
