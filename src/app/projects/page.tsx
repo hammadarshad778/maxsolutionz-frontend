@@ -43,6 +43,7 @@ export default function ProjectsPage() {
               style={{ transformStyle: "preserve-3d" }}
             >
               <Card className="overflow-hidden border border-white/10 bg-gradient-to-br from-white/10 to-transparent backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:border-primary/50 hover:shadow-[0_20px_50px_rgba(var(--primary),0.15)] transition-all duration-500 relative group">
+                <CardContent className="p-0">
                   <div className="grid md:grid-cols-12 gap-6 lg:gap-12 p-6 md:p-10">
                     <div className="md:col-span-12 lg:col-span-5 flex flex-col justify-center">
                       <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium w-fit mb-6">
