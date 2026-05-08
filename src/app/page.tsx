@@ -117,52 +117,73 @@ export default function Home() {
               animate={{ y: [-10, 10, -10] }} 
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               whileHover={{ rotateX: 10, rotateY: -10, scale: 1.05 }}
-              className="relative rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(var(--primary),0.3)] bg-black/40 backdrop-blur-md transform-gpu group cursor-pointer"
+              className="relative w-full aspect-square md:aspect-auto md:h-[500px] rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(var(--primary),0.3)] bg-[#05060A] transform-gpu group cursor-pointer flex items-center justify-center"
               style={{ transformStyle: "preserve-3d" }}
             >
-              {/* Core Image */}
-              <motion.div
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              >
-                <Image 
-                  src="/hero.png" 
-                  alt="E-commerce Web Development" 
-                  width={800} 
-                  height={600} 
-                  className="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
-                  priority
+              {/* Abstract 3D Data Core */}
+              <div className="relative w-56 h-56 md:w-72 md:h-72 flex items-center justify-center" style={{ transformStyle: "preserve-3d" }}>
+                {/* Deep Background Glow */}
+                <motion.div
+                  animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-0 m-auto w-32 h-32 bg-primary/40 rounded-full blur-3xl pointer-events-none"
                 />
-              </motion.div>
 
-              {/* Holographic Overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent mix-blend-overlay" />
-              
+                {/* Inner Bright Orb */}
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1], opacity: [0.8, 1, 0.8] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                  className="absolute inset-0 m-auto w-8 h-8 bg-white rounded-full shadow-[0_0_40px_#fff]"
+                />
+
+                {/* Rotating Geometric Rings (The 'Core') */}
+                {[...Array(6)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute inset-0 m-auto w-full h-full border border-primary/30 rounded-full"
+                    style={{
+                      rotateZ: i * 30,
+                      transformStyle: "preserve-3d"
+                    }}
+                    animate={{
+                      rotateX: [0, 360],
+                      rotateY: [0, 360],
+                    }}
+                    transition={{
+                      duration: 12 + i * 2,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
+                ))}
+
+                {/* Outer Orbiting Data Nodes */}
+                <motion.div 
+                  animate={{ rotateZ: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-[-40px] border border-dashed border-white/10 rounded-full pointer-events-none"
+                >
+                  <motion.div 
+                    animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="absolute -top-2 left-1/2 w-4 h-4 bg-blue-500 rounded-full shadow-[0_0_15px_#3b82f6]"
+                  />
+                  <motion.div 
+                    animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
+                    transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                    className="absolute -bottom-2 right-1/4 w-3 h-3 bg-purple-500 rounded-full shadow-[0_0_15px_#a855f7]"
+                  />
+                </motion.div>
+              </div>
+
               {/* High-Tech Grid Overlay */}
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)] opacity-30 pointer-events-none" />
+              <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000_60%,transparent_100%)] opacity-50 pointer-events-none" />
 
               {/* Scanning Laser Line */}
               <motion.div
                 animate={{ top: ["0%", "100%", "0%"] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                className="absolute left-0 right-0 h-0.5 bg-primary/80 shadow-[0_0_15px_rgba(var(--primary),1)] z-10 pointer-events-none"
-              />
-
-              {/* Floating Data Nodes inside image */}
-              <motion.div 
-                animate={{ opacity: [0, 1, 0], scale: [0.8, 1.2, 0.8] }}
-                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                className="absolute top-1/4 left-1/4 w-3 h-3 bg-blue-400 rounded-full shadow-[0_0_10px_#60a5fa] pointer-events-none" 
-              />
-              <motion.div 
-                animate={{ opacity: [0, 1, 0], scale: [0.8, 1.2, 0.8] }}
-                transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                className="absolute top-1/2 right-1/3 w-2 h-2 bg-purple-400 rounded-full shadow-[0_0_10px_#c084fc] pointer-events-none" 
-              />
-              <motion.div 
-                animate={{ opacity: [0, 1, 0], scale: [0.8, 1.2, 0.8] }}
-                transition={{ duration: 2.5, repeat: Infinity, delay: 1.5 }}
-                className="absolute bottom-1/3 left-1/2 w-4 h-4 bg-primary/60 rounded-full shadow-[0_0_15px_rgba(var(--primary),1)] pointer-events-none" 
+                className="absolute left-0 right-0 h-px bg-primary/60 shadow-[0_0_20px_rgba(var(--primary),1)] z-10 pointer-events-none"
               />
               
               {/* Fake System Output */}
@@ -173,7 +194,7 @@ export default function Home() {
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse delay-150" />
                 </div>
                 <div className="text-[10px] font-mono text-primary/80 tracking-widest uppercase">
-                  System.Active // 0x489F
+                  Nexus.Core // Online
                 </div>
               </div>
             </motion.div>
