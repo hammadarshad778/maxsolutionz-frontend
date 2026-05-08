@@ -116,18 +116,66 @@ export default function Home() {
             <motion.div 
               animate={{ y: [-10, 10, -10] }} 
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(var(--primary),0.3)] bg-black/40 backdrop-blur-md transform-gpu"
+              whileHover={{ rotateX: 10, rotateY: -10, scale: 1.05 }}
+              className="relative rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(var(--primary),0.3)] bg-black/40 backdrop-blur-md transform-gpu group cursor-pointer"
               style={{ transformStyle: "preserve-3d" }}
             >
-              <Image 
-                src="/hero.png" 
-                alt="E-commerce Web Development" 
-                width={800} 
-                height={600} 
-                className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
-                priority
+              {/* Core Image */}
+              <motion.div
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              >
+                <Image 
+                  src="/hero.png" 
+                  alt="E-commerce Web Development" 
+                  width={800} 
+                  height={600} 
+                  className="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+                  priority
+                />
+              </motion.div>
+
+              {/* Holographic Overlays */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent mix-blend-overlay" />
+              
+              {/* High-Tech Grid Overlay */}
+              <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)] opacity-30 pointer-events-none" />
+
+              {/* Scanning Laser Line */}
+              <motion.div
+                animate={{ top: ["0%", "100%", "0%"] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                className="absolute left-0 right-0 h-0.5 bg-primary/80 shadow-[0_0_15px_rgba(var(--primary),1)] z-10 pointer-events-none"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent mix-blend-overlay" />
+
+              {/* Floating Data Nodes inside image */}
+              <motion.div 
+                animate={{ opacity: [0, 1, 0], scale: [0.8, 1.2, 0.8] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                className="absolute top-1/4 left-1/4 w-3 h-3 bg-blue-400 rounded-full shadow-[0_0_10px_#60a5fa] pointer-events-none" 
+              />
+              <motion.div 
+                animate={{ opacity: [0, 1, 0], scale: [0.8, 1.2, 0.8] }}
+                transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                className="absolute top-1/2 right-1/3 w-2 h-2 bg-purple-400 rounded-full shadow-[0_0_10px_#c084fc] pointer-events-none" 
+              />
+              <motion.div 
+                animate={{ opacity: [0, 1, 0], scale: [0.8, 1.2, 0.8] }}
+                transition={{ duration: 2.5, repeat: Infinity, delay: 1.5 }}
+                className="absolute bottom-1/3 left-1/2 w-4 h-4 bg-primary/60 rounded-full shadow-[0_0_15px_rgba(var(--primary),1)] pointer-events-none" 
+              />
+              
+              {/* Fake System Output */}
+              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between z-20 pointer-events-none">
+                <div className="flex gap-2">
+                  <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse delay-75" />
+                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse delay-150" />
+                </div>
+                <div className="text-[10px] font-mono text-primary/80 tracking-widest uppercase">
+                  System.Active // 0x489F
+                </div>
+              </div>
             </motion.div>
 
             {/* Floating UI Badges */}
