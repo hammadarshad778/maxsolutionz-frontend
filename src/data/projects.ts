@@ -130,5 +130,72 @@ export const projects = [
     role: "Lead Developer / Web Strategist",
     stack: ["WordPress", "PHP", "Custom UI/UX Design"],
     link: "https://bielefelder-immobilien.de/"
+  },
+  {
+    title: "PremPoint – IT Solutions & Digital Services (Germany)",
+    description: "Developed the official digital platform for PremPoint, a German-based IT service provider. The project focused on creating a professional, high-trust corporate presence that effectively communicates complex technical services—including software development, IT consulting, and digital infrastructure—to a European B2B audience.",
+    keySolutions: [
+      "B2B Service Architecture: Designed a structured, professional UI that clearly categorizes diverse IT service pillars, allowing potential corporate clients to quickly identify technical solutions.",
+      "Modern Tech Aesthetic: Implemented a clean, 'tech-forward' design language that reflects innovation and reliability, essential for the competitive German IT sector.",
+      "Strategic Lead Generation: Engineered optimized contact funnels and clear Call-to-Action (CTA) modules to convert technical inquiries into high-quality business leads.",
+      "Global Standards Compliance: Developed the site with a focus on high performance, security, and German data privacy standards, ensuring a seamless experience across European servers."
+    ],
+    role: "Lead Developer / IT Strategist",
+    stack: ["WordPress", "Custom PHP", "CSS3"],
+    link: "https://prempoint.de/"
+  },
+  {
+    title: "Projektionlab – Projection Mapping & Visual Arts (Germany)",
+    description: "Developed a visually stunning digital portfolio for Projektionlab, a German creative studio specializing in professional projection mapping and immersive visual experiences. The project objective was to build a high-impact website that serves as a canvas for their large-scale visual installations, balancing heavy media content with high-speed performance.",
+    keySolutions: [
+      "Media-Centric UI Design: Crafted a dark-themed, cinematic interface specifically designed to make vibrant projection mapping videos and high-resolution event photography stand out.",
+      "Immersive Portfolio Gallery: Developed a custom gallery architecture to showcase large-scale projects, ensuring that video background and motion graphics are integrated without compromising site speed.",
+      "Service Showcase for Events: Designed dedicated sections for diverse services including 3D mapping, event lighting, and creative concept development, targeting the high-end European events industry.",
+      "High-Performance Optimization: Implemented advanced video compression and lazy-loading techniques to ensure the site's rich visual content loads flawlessly on both desktop and mobile devices."
+    ],
+    role: "Lead Developer / Web Architect",
+    stack: ["WordPress", "Custom CSS", "JavaScript (for motion effects)", "PHP"],
+    link: "https://projektionlab.de/"
+  },
+  {
+    title: "Okna Kharkiv – Interior Solutions (Ukraine)",
+    description: "Developed a comprehensive service and retail platform for Okna Kharkiv, a specialized provider of home improvement solutions. The website serves as a digital catalog for a wide range of products—including windows, doors, balconies, and custom kitchen installations—designed to capture high-intent leads in the Ukrainian construction and renovation market.",
+    keySolutions: [
+      "Multi-Category Catalog Architecture: Engineered a structured navigation system to handle diverse product lines (Windows/Doors vs. Kitchen Furniture), ensuring users can easily switch between exterior home solutions and interior design.",
+      "Visual Gallery & Product Showcasing: Implemented high-quality image galleries for each service category to showcase craftsmanship and material quality, essential for high-ticket home renovations.",
+      "Localized Conversion Funnel: Designed custom inquiry forms for measurement requests and price estimates, tailored to the specific shopping habits and service requirements of the Ukrainian market.",
+      "Responsive Service Hub: Optimized the UI for mobile users to ensure that homeowners and contractors can browse catalogs and contact experts effortlessly from job sites or on the go."
+    ],
+    role: "Lead Developer / Web Architect",
+    stack: ["WordPress", "Custom CSS", "PHP"],
+    link: "https://okna-kharkiv.com/"
+  },
+  {
+    title: "Juicy Bar – Vaping & E-Liquid Store (USA)",
+    description: "Developed a fully customized e-commerce platform for Juicy Bar, a prominent vaping brand in the US market. This project moved beyond standard templates to create a unique, brand-centric shopping experience that handles the specific regulatory and aesthetic requirements of the American vaping industry.",
+    keySolutions: [
+      "100% Custom UI/UX Design: Built a bespoke frontend from the ground up, featuring a bold, vibrant aesthetic that matches the 'Juicy Bar' brand identity, departing from generic e-commerce layouts.",
+      "Age Verification Integration: Implemented robust, US-compliant age gate systems to ensure the platform adheres to federal and state regulations for tobacco and nicotine sales.",
+      "High-End Product Visuals: Developed custom product display modules that highlight flavor profiles and technical device specs with high-resolution imagery and interactive elements.",
+      "Mobile-First Performance: Optimized the site for high-speed mobile browsing.",
+      "Advanced Inventory Sync: Integrated a backend system capable of managing real-time stock levels across various flavors, nicotine strengths, and device colors."
+    ],
+    role: "Lead Developer / Custom E-commerce Architect",
+    stack: ["WordPress", "WooCommerce (Highly Customized)", "Custom JavaScript", "PHP"],
+    link: "https://juicybar.us/"
+  },
+  {
+    title: "Raz Vape – Premium Disposable Vaping Store (USA)",
+    description: "Developed a high-impact, fully customized e-commerce platform for Raz Vape, a leading brand in the American disposable vape market. The project focused on creating a bold, high-energy digital storefront that emphasizes product authenticity, flavor variety, and a seamless mobile shopping experience for a highly competitive US industry.",
+    keySolutions: [
+      "Bespoke Brand Experience: Built a totally customized UI that utilizes high-contrast aesthetics and vibrant color palettes to reflect the brand's energetic identity, moving away from standard e-commerce templates.",
+      "Complex Product Attribute Mapping: Developed an intuitive selection system for diverse flavor profiles and device series, allowing users to filter by puff count, nicotine strength, and flavor notes.",
+      "Compliance-Ready Architecture: Integrated US-standard age verification protocols and legal disclaimers to ensure full adherence to FDA and state-level regulatory requirements for nicotine products.",
+      "Conversion-Driven Performance: Engineered a streamlined 'Quick-Cart' and localized US checkout flow.",
+      "Visual Storytelling: Implemented custom-coded hover effects and high-definition product renders that showcase the unique design and features of the hardware."
+    ],
+    role: "Lead Developer / Custom E-commerce Specialist",
+    stack: ["WordPress", "WooCommerce (Highly Customized)", "JavaScript", "PHP"],
+    link: "https://razvape.us/"
   }
 ];
