@@ -79,7 +79,7 @@ export default function Home() {
               🚀 The Ultimate E-commerce & Web Experts
             </motion.div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
               Transforming <br className="hidden md:block"/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-purple-500 animate-gradient-x">Digital Landscapes</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
@@ -91,17 +91,21 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              <Button size="lg" asChild className="w-full sm:w-auto h-14 px-8 text-lg group relative overflow-hidden">
-                <Link href="/services">
-                  <span className="relative z-10 flex items-center">
-                    Explore Services
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto h-14 px-8 text-lg hover:bg-primary/5 transition-colors border-primary/20">
-                <Link href="/contact">Hire Experts</Link>
-              </Button>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
+                <Button size="lg" asChild className="w-full sm:w-auto h-14 px-8 text-lg group relative overflow-hidden shadow-[0_0_20px_rgba(var(--primary),0.3)]">
+                  <Link href="/services">
+                    <span className="relative z-10 flex items-center">
+                      Explore Services
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </Link>
+                </Button>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" asChild className="w-full sm:w-auto h-14 px-8 text-lg hover:bg-primary/5 transition-colors border-primary/20 hover:border-primary/50">
+                  <Link href="/contact">Hire Experts</Link>
+                </Button>
+              </motion.div>
             </motion.div>
           </motion.div>
 
@@ -120,6 +124,26 @@ export default function Home() {
               className="relative w-full aspect-square md:aspect-auto md:h-[500px] rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(var(--primary),0.3)] bg-[#05060A] transform-gpu group cursor-pointer flex items-center justify-center"
               style={{ transformStyle: "preserve-3d" }}
             >
+              {/* Colorful Moving Background Blobs */}
+              <motion.div
+                animate={{
+                  x: ["0%", "30%", "-30%", "0%"],
+                  y: ["0%", "-30%", "30%", "0%"],
+                  scale: [1, 1.5, 1],
+                }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                className="absolute w-64 h-64 bg-blue-600/30 rounded-full blur-[80px] pointer-events-none"
+              />
+              <motion.div
+                animate={{
+                  x: ["0%", "-30%", "30%", "0%"],
+                  y: ["0%", "30%", "-30%", "0%"],
+                  scale: [1.5, 1, 1.5],
+                }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute w-64 h-64 bg-purple-600/30 rounded-full blur-[80px] pointer-events-none"
+              />
+
               {/* Abstract 3D Data Core with Color Animation */}
               <motion.div 
                 className="relative w-56 h-56 md:w-72 md:h-72 flex items-center justify-center" 
