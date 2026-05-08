@@ -263,5 +263,18 @@ export const projects = [
     role: "Lead Developer / E-commerce Architect",
     stack: ["WordPress", "WooCommerce", "PHP", "JavaScript"],
     link: "https://smokersheap.com/"
+  },
+  {
+    title: "Pearls Developers – Software & IT Solutions (UK)",
+    description: "Engineered the primary digital storefront for Pearls Developers, a UK-based software agency specializing in enterprise-grade web development and IT consulting. The project's goal was to establish a high-trust, authoritative presence tailored specifically to the competitive British corporate sector.",
+    keySolutions: [
+      "UK-Market Positioning: Crafted a polished, corporate UI design that resonates with UK businesses, emphasizing reliability, technical excellence, and professional service delivery.",
+      "Comprehensive Service Architecture: Structured a complex portfolio of services—from custom software development to IT infrastructure—into an intuitive, easy-to-navigate digital experience.",
+      "B2B Conversion Optimization: Integrated localized, high-converting lead generation funnels designed to capture inquiries from corporate clients across the United Kingdom.",
+      "High-Performance Engineering: Developed with a highly optimized backend to ensure rapid page load speeds and robust security, meeting the strict standards of modern British enterprises."
+    ],
+    role: "Lead Developer / Solutions Architect",
+    stack: ["Next.js", "React", "Node.js", "Tailwind CSS"],
+    link: "https://pearls-developers.co.uk/"
   }
 ];

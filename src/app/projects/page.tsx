@@ -20,6 +20,11 @@ export default function ProjectsPage() {
       description: "Precision-engineered platforms adhering to strict German market standards and privacy laws."
     },
     {
+      country: "United Kingdom (UK)",
+      items: projects.filter(p => p.title.includes("UK")),
+      description: "High-trust, authoritative corporate presences tailored for the competitive British sector."
+    },
+    {
       country: "Pakistan",
       items: projects.filter(p => p.title.includes("Pakistan")),
       description: "High-performance retail solutions optimized for local logistics and mobile connectivity."
