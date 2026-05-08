@@ -64,10 +64,10 @@ export default function FullstackDevelopmentPage() {
             We utilize the same enterprise-grade technologies trusted by Silicon Valley giants.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           {features.map((feature, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ export default function FullstackDevelopmentPage() {
               </p>
               <ul className="space-y-6">
                 {["Microservices & Monolithic Architectures", "Real-Time WebSockets Integration", "Headless CMS & Commerce", "Strict TypeScript Codebases"].map((item, i) => (
-                  <motion.li 
+                  <motion.li
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}

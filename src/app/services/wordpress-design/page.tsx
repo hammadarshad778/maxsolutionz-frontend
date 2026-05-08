@@ -66,10 +66,10 @@ export default function WordPressDesignPage() {
             We don't just build websites; we engineer digital assets that perform.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           {features.map((feature, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -100,7 +100,7 @@ export default function WordPressDesignPage() {
               </p>
               <ul className="space-y-6">
                 {["100% Custom Code Architecture", "Advanced SEO Semantic Structuring", "Zero-Bloat Plugin Policy", "Frictionless API Integrations"].map((item, i) => (
-                  <motion.li 
+                  <motion.li
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
