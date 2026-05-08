@@ -8,7 +8,7 @@ export const projects = [
       "Localized Logistics: Tailored the checkout flow for Pakistan by prioritizing Cash on Delivery (COD) and implementing area-specific delivery scheduling.",
       "Speed Optimization: Applied aggressive image compression and 'Lazy Loading' to ensure the site remains fully functional on local 3G/4G mobile networks."
     ],
-    role: "Lead Developer / E-commerce Architect",
+    role: "Full-Stack Developer & E-Commerce Architect",
     stack: ["WordPress", "WooCommerce", "PHP", "JavaScript"],
     link: "https://klass-stores.pk/"
   },
@@ -22,7 +22,7 @@ export const projects = [
       "Dynamic Stock Management: Built a real-time inventory tracking system to manage fast-moving tech products and pre-order cycles.",
       "Mobile-First Performance: Focused on extreme speed optimization to ensure the site remains responsive."
     ],
-    role: "Lead Developer / E-commerce Specialist",
+    role: "Lead Full-Stack Engineer & Solutions Architect",
     stack: ["WordPress", "WooCommerce", "PHP", "JavaScript"],
     link: "https://pearls-store.com.pk/"
   },
@@ -36,7 +36,7 @@ export const projects = [
       "Responsive Inventory Management: Developed a robust backend to manage diverse variations, including bed sizes and fabric types.",
       "Speed Optimization for Mobile Data: Optimized the site for fast loading on 3G/4G networks, ensuring high-quality images without compromising performance."
     ],
-    role: "Lead Developer / E-commerce Specialist",
+    role: "Senior Developer & E-Commerce Specialist",
     stack: ["WordPress", "WooCommerce", "Custom PHP", "CSS3"],
     link: "https://khatoon-e-jannat.com/"
   },
@@ -49,7 +49,7 @@ export const projects = [
       "Lead Generation Engine: Integrated highly optimized conversion funnels and inquiry systems to capture B2B leads from diverse geographical regions.",
       "Global Performance Standards: Engineered the site with a lightweight architecture to ensure lightning-fast load times across international servers."
     ],
-    role: "Lead Developer",
+    role: "End-to-End Web Developer & Technical Lead",
     stack: ["WordPress", "n8n Integration", "JavaScript", "PHP"],
     link: "https://pearls-it.com/"
   },
@@ -62,7 +62,7 @@ export const projects = [
       "Trust & Security Integration: Built-in dedicated sections for process transparency and data privacy, essential for the highly regulated German real estate market.",
       "Speed & Mobile Performance: Optimized the site for local performance, ensuring rapid loading on mobile devices for users searching for immediate property solutions."
     ],
-    role: "Lead Developer / Web Strategist",
+    role: "Lead Software Engineer & Digital Architect",
     stack: ["WordPress / Elementor", "Custom CSS", "PHP"],
     link: "https://haus-verkaufen-bielefeld.de/"
   },
@@ -75,7 +75,7 @@ export const projects = [
       "Localized Compliance: Ensured the design and layout meet German market expectations for 'Seriosität' (seriousness) and trust, including clear navigation and accessible contact points.",
       "Performance Engineering: Optimized the site's architecture for fast loading and mobile responsiveness, catering to professional clients and investors requiring quick access to information."
     ],
-    role: "Lead Developer / Web Architect",
+    role: "Full-Stack E-Commerce Developer",
     stack: ["WordPress", "Custom PHP", "CSS3"],
     link: "https://schmidt-immobilienbewertung.de/"
   },
@@ -88,7 +88,7 @@ export const projects = [
       "Conversion-Optimized Inquiry Flow: Integrated custom, high-converting contact forms designed to capture essential property data, streamlining the lead generation process for the client.",
       "Local Market SEO & Compliance: Developed the site with a focus on local German search intent and strict data privacy standards, ensuring the site ranks well for regional appraisal keywords."
     ],
-    role: "Lead Developer / Web Architect",
+    role: "Complete Platform Developer & Architect",
     stack: ["WordPress", "Custom CSS", "PHP"],
     link: "https://schmidtimmobilienbewertung.de/"
   },
@@ -101,7 +101,7 @@ export const projects = [
       "Mobile-First Real Estate UX: Optimized the interface for seamless mobile browsing, ensuring property information and contact options are easily accessible for users on the go.",
       "Performance & SEO: Implemented technical SEO best practices and speed optimizations to ensure high visibility in regional German search results."
     ],
-    role: "Lead Developer / Web Strategist",
+    role: "Lead Developer & Digital Transformation Specialist",
     stack: ["WordPress", "Custom CSS", "PHP"],
     link: "https://immobilien-makler-bielefeld.de/"
   },
@@ -114,7 +114,7 @@ export const projects = [
       "Structured Content Architecture: Organized complex real estate data—including property types, locations, and service descriptions—into a clean, easy-to-navigate hierarchy.",
       "Speed & Accessibility: Optimized the site for high performance across all German network providers, ensuring that high-resolution property imagery loads instantly on both desktop and mobile."
     ],
-    role: "Lead Developer / Web Strategist",
+    role: "Full-Stack Developer & E-Commerce Architect",
     stack: ["WordPress", "PHP", "Custom UI/UX Design"],
     link: "https://bielefelder-immobilien.de/"
   },
@@ -127,7 +127,7 @@ export const projects = [
       "Strategic Lead Generation: Engineered optimized contact funnels and clear Call-to-Action (CTA) modules to convert technical inquiries into high-quality business leads.",
       "Global Standards Compliance: Developed the site with a focus on high performance, security, and German data privacy standards, ensuring a seamless experience across European servers."
     ],
-    role: "Lead Developer / IT Strategist",
+    role: "Lead Full-Stack Engineer & Solutions Architect",
     stack: ["WordPress", "Custom PHP", "CSS3"],
     link: "https://prempoint.de/"
   },
@@ -140,7 +140,7 @@ export const projects = [
       "Service Showcase for Events: Designed dedicated sections for diverse services including 3D mapping, event lighting, and creative concept development, targeting the high-end European events industry.",
       "High-Performance Optimization: Implemented advanced video compression and lazy-loading techniques to ensure the site's rich visual content loads flawlessly on both desktop and mobile devices."
     ],
-    role: "Lead Developer / Web Architect",
+    role: "Senior Developer & E-Commerce Specialist",
     stack: ["WordPress", "Custom CSS", "JavaScript (for motion effects)", "PHP"],
     link: "https://projektionlab.de/"
   },
@@ -153,7 +153,7 @@ export const projects = [
       "Localized Conversion Funnel: Designed custom inquiry forms for measurement requests and price estimates, tailored to the specific shopping habits and service requirements of the Ukrainian market.",
       "Responsive Service Hub: Optimized the UI for mobile users to ensure that homeowners and contractors can browse catalogs and contact experts effortlessly from job sites or on the go."
     ],
-    role: "Lead Developer / Web Architect",
+    role: "End-to-End Web Developer & Technical Lead",
     stack: ["WordPress", "Custom CSS", "PHP"],
     link: "https://okna-kharkiv.com/"
   },
@@ -167,7 +167,7 @@ export const projects = [
       "Mobile-First Performance: Optimized the site for high-speed mobile browsing.",
       "Advanced Inventory Sync: Integrated a backend system capable of managing real-time stock levels across various flavors, nicotine strengths, and device colors."
     ],
-    role: "Lead Developer / Custom E-commerce Architect",
+    role: "Lead Software Engineer & Digital Architect",
     stack: ["WordPress", "WooCommerce (Highly Customized)", "Custom JavaScript", "PHP"],
     link: "https://juicybar.us/"
   },
@@ -181,7 +181,7 @@ export const projects = [
       "Conversion-Driven Performance: Engineered a streamlined 'Quick-Cart' and localized US checkout flow.",
       "Visual Storytelling: Implemented custom-coded hover effects and high-definition product renders that showcase the unique design and features of the hardware."
     ],
-    role: "Lead Developer / Custom E-commerce Specialist",
+    role: "Full-Stack E-Commerce Developer",
     stack: ["WordPress", "WooCommerce (Highly Customized)", "JavaScript", "PHP"],
     link: "https://razvape.us/"
   },
@@ -195,7 +195,7 @@ export const projects = [
       "Compliance & Age Verification: Integrated industry-standard US age-gating and legal disclaimers to ensure the platform meets all federal and state-level regulatory requirements.",
       "Advanced AJAX Interactivity: Implemented smooth transitions and instant-loading elements to provide a 'premium app' feel within a standard web browser."
     ],
-    role: "Lead Developer / Custom UI Architect",
+    role: "Complete Platform Developer & Architect",
     stack: ["WordPress", "WooCommerce (Highly Customized)", "PHP", "JavaScript"],
     link: "https://juicybarflavor.com/"
   },
@@ -208,7 +208,7 @@ export const projects = [
       "Regulatory Compliance Integration: Integrated US-standard age verification and specialized shipping logic to comply with PACT Act requirements and other federal nicotine sales regulations.",
       "Conversion-Focused UI: Designed an interface that prioritizes 'Best Sellers' and 'Trending' products, using social proof and clear CTA elements to guide users to the most popular items."
     ],
-    role: "Lead Developer / E-commerce Architect",
+    role: "Lead Developer & Digital Transformation Specialist",
     stack: ["WordPress", "WooCommerce", "PHP", "Custom SEO Framework"],
     link: "https://topdisposablevapes.com/"
   },
@@ -221,7 +221,7 @@ export const projects = [
       "Strain-Based Navigation: Engineered a clean, intuitive catalog categorized by 'Vein Colors' (Red, White, Green) and product formats (Powder, Capsules), allowing users to easily find products based on their specific wellness goals.",
       "Regulatory Compliance & Age Gating: Implemented robust US-compliant age verification and localized shipping restrictions to ensure the platform adheres to varying state and local regulations."
     ],
-    role: "Lead Developer / E-commerce Architect",
+    role: "Full-Stack Developer & E-Commerce Architect",
     stack: ["WordPress", "WooCommerce", "High-Risk Gateway Integration", "Custom CSS"],
     link: "https://butterflykratomco.com/"
   },
@@ -234,7 +234,7 @@ export const projects = [
       "Regulatory Compliance Integration: Implemented mandatory US-standard age verification and specialized shipping logic to ensure the platform remains fully compliant with federal and state-level nicotine sales regulations.",
       "Conversion-Optimized Checkout: Developed a fast, multi-step checkout process designed to reduce cart abandonment, specifically optimized for mobile users who make up the majority of the US vaping market."
     ],
-    role: "Lead Developer / E-commerce Architect",
+    role: "Lead Full-Stack Engineer & Solutions Architect",
     stack: ["WordPress", "WooCommerce", "PHP", "Custom CSS"],
     link: "https://vapemadeinusa.com/"
   },
@@ -247,7 +247,7 @@ export const projects = [
       "Compliance & Legal Integration: Implemented mandatory US-standard age-gating and legal disclaimers, ensuring the site meets all FDA and state-level regulatory requirements for nicotine sales.",
       "Mobile-Optimized Conversions: Engineered a lightweight, mobile-first interface designed for rapid browsing and 'one-click' style purchasing, essential for the mobile-dominant US vaping demographic."
     ],
-    role: "Lead Developer / E-commerce Architect",
+    role: "Senior Developer & E-Commerce Specialist",
     stack: ["WordPress", "WooCommerce", "Custom CSS", "PHP"],
     link: "https://fruttibarvapes.com/"
   },
@@ -260,7 +260,7 @@ export const projects = [
       "Community-Focused UX: Designed a professional, 'enthusiast-first' interface that prioritizes transparency and product education, featuring detailed technical specs and usage guides for advanced hardware.",
       "Performance & Scalability: Implemented enterprise-level caching and database optimization to ensure the site maintains rapid load times during high-traffic promotional periods and product launches."
     ],
-    role: "Lead Developer / E-commerce Architect",
+    role: "End-to-End Web Developer & Technical Lead",
     stack: ["WordPress", "WooCommerce", "PHP", "JavaScript"],
     link: "https://smokersheap.com/"
   },
@@ -273,7 +273,7 @@ export const projects = [
       "B2B Conversion Optimization: Integrated localized, high-converting lead generation funnels designed to capture inquiries from corporate clients across the United Kingdom.",
       "High-Performance Engineering: Developed with a highly optimized backend to ensure rapid page load speeds and robust security, meeting the strict standards of modern British enterprises."
     ],
-    role: "Lead Developer / Solutions Architect",
+    role: "Lead Software Engineer & Digital Architect",
     stack: ["Next.js", "React", "Node.js", "Tailwind CSS"],
     link: "https://pearls-developers.co.uk/"
   }
