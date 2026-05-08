@@ -41,19 +41,6 @@ export const projects = [
     link: "https://khatoon-e-jannat.com/"
   },
   {
-    title: "Max Solutionz – IT & Digital Transformation (Europe)",
-    description: "Developed the flagship digital presence for Max Solutionz, a premier IT consultancy and software house. The platform is designed to position the company as a global leader in digital innovation, offering a comprehensive suite of services.",
-    keySolutions: [
-      "Corporate Authority Branding: Engineered a sophisticated, high-performance UI that reflects technical excellence and builds immediate trust with international B2B clients.",
-      "Service Portfolio Architecture: Designed a structured navigation system to showcase diverse core competencies, including Web Development, Workflow Automation, and Digital Marketing.",
-      "Global Lead Acquisition: Integrated highly optimized conversion funnels and inquiry systems tailored for international markets.",
-      "Performance-First Engineering: Built with a focus on extreme speed and scalability, serving as a benchmark for technical quality."
-    ],
-    role: "Founder & Lead Architect",
-    stack: ["Full-Stack Development", "Agency Strategy", "Global Business Scaling"],
-    link: "https://maxsolutionz.com/"
-  },
-  {
     title: "Pearls IT – Automation & Transformation (Europe)",
     description: "Developed the official digital presence for Pearls IT, an agency focused on smart automation and digital workflows for businesses in Europe. The platform is designed to bridge the gap between complex backend technology and business-scale growth.",
     keySolutions: [
