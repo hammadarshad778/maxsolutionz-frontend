@@ -65,5 +65,70 @@ export const projects = [
     role: "Lead Developer",
     stack: ["WordPress", "n8n Integration", "JavaScript", "PHP"],
     link: "https://pearls-it.com/"
+  },
+  {
+    title: "Haus Verkaufen Bielefeld – Real Estate Solutions (Germany)",
+    description: "Developed a high-converting lead generation platform for a real estate service in Bielefeld, Germany. The site is strategically designed to help homeowners sell their properties quickly and efficiently, focusing on trust, local expertise, and a streamlined user journey.",
+    keySolutions: [
+      "Lead Capture Optimization: Engineered a simplified, multi-step inquiry process that allows German homeowners to request property valuations with minimal friction.",
+      "Local Authority UI: Designed a professional, clean interface that aligns with German aesthetic standards—prioritizing clarity, legal compliance, and local 'Bielefeld' branding.",
+      "Trust & Security Integration: Built-in dedicated sections for process transparency and data privacy, essential for the highly regulated German real estate market.",
+      "Speed & Mobile Performance: Optimized the site for local performance, ensuring rapid loading on mobile devices for users searching for immediate property solutions."
+    ],
+    role: "Lead Developer / Web Strategist",
+    stack: ["WordPress / Elementor", "Custom CSS", "PHP"],
+    link: "https://haus-verkaufen-bielefeld.de/"
+  },
+  {
+    title: "Schmidt Immobilienbewertung – Real Estate (Germany)",
+    description: "Developed a professional service platform for Schmidt Immobilienbewertung, a German real estate valuation firm. The project focus was to establish a high-authority digital presence that facilitates professional property appraisals while adhering to the strict standards of the German real estate industry.",
+    keySolutions: [
+      "Service-Centric UI: Designed a structured, corporate interface that highlights specialized valuation services for residential and commercial properties, ensuring professional credibility.",
+      "Streamlined Inquiry Funnel: Implemented optimized lead capture forms specifically for property valuation requests, making it easy for German clients to initiate the appraisal process.",
+      "Localized Compliance: Ensured the design and layout meet German market expectations for 'Seriosität' (seriousness) and trust, including clear navigation and accessible contact points.",
+      "Performance Engineering: Optimized the site's architecture for fast loading and mobile responsiveness, catering to professional clients and investors requiring quick access to information."
+    ],
+    role: "Lead Developer / Web Architect",
+    stack: ["WordPress", "Custom PHP", "CSS3"],
+    link: "https://schmidt-immobilienbewertung.de/"
+  },
+  {
+    title: "Schmidt Immobilienbewertung – Property (Germany)",
+    description: "Developed a high-authority digital platform for a specialized German real estate appraisal firm. The project's objective was to create a trustworthy, 'consultant-grade' web presence that allows homeowners and investors to request legally sound property valuations across Germany.",
+    keySolutions: [
+      "Trust-Driven Corporate Design: Crafted a minimalist and professional UI that reflects the precision and reliability required in the German appraisal industry.",
+      "Complex Service Mapping: Organized detailed service sections for various valuation types, including inheritance disputes, sales, and tax assessments, making navigation effortless for the user.",
+      "Conversion-Optimized Inquiry Flow: Integrated custom, high-converting contact forms designed to capture essential property data, streamlining the lead generation process for the client.",
+      "Local Market SEO & Compliance: Developed the site with a focus on local German search intent and strict data privacy standards, ensuring the site ranks well for regional appraisal keywords."
+    ],
+    role: "Lead Developer / Web Architect",
+    stack: ["WordPress", "Custom CSS", "PHP"],
+    link: "https://schmidtimmobilienbewertung.de/"
+  },
+  {
+    title: "Immobilien Makler Bielefeld – Real Estate (Germany)",
+    description: "Developed a high-end digital storefront for a professional real estate brokerage in Bielefeld. The platform is designed to connect property sellers with qualified buyers, focusing on local market authority and a premium user experience.",
+    keySolutions: [
+      "Local Authority Branding: Developed a clean, high-trust UI tailored specifically for the Bielefeld real estate market, emphasizing local expertise and professional brokerage services.",
+      "Lead Generation Architecture: Engineered optimized conversion paths for both property sellers (valuation requests) and buyers (listing inquiries) to maximize business growth.",
+      "Mobile-First Real Estate UX: Optimized the interface for seamless mobile browsing, ensuring property information and contact options are easily accessible for users on the go.",
+      "Performance & SEO: Implemented technical SEO best practices and speed optimizations to ensure high visibility in regional German search results."
+    ],
+    role: "Lead Developer / Web Strategist",
+    stack: ["WordPress", "Custom CSS", "PHP"],
+    link: "https://immobilien-makler-bielefeld.de/"
+  },
+  {
+    title: "Immobilien Makler Bielefeld – Regional Property Hub (Germany)",
+    description: "Developed a localized real estate platform focused on the Bielefeld property market. The project was designed to act as a centralized hub for property listings and brokerage services, providing a professional and trustworthy interface for the German real estate sector.",
+    keySolutions: [
+      "Regional Market Positioning: Created a design language that resonates with the Bielefeld community, emphasizing local expertise and 'neighborhood-level' property knowledge.",
+      "Property Inquiry System: Integrated a streamlined communication layer that allows potential buyers and sellers to connect directly with experts through optimized, user-friendly forms.",
+      "Structured Content Architecture: Organized complex real estate data—including property types, locations, and service descriptions—into a clean, easy-to-navigate hierarchy.",
+      "Speed & Accessibility: Optimized the site for high performance across all German network providers, ensuring that high-resolution property imagery loads instantly on both desktop and mobile."
+    ],
+    role: "Lead Developer / Web Strategist",
+    stack: ["WordPress", "PHP", "Custom UI/UX Design"],
+    link: "https://bielefelder-immobilien.de/"
   }
 ];
