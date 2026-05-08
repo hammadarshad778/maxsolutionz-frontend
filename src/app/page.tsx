@@ -120,13 +120,18 @@ export default function Home() {
               className="relative w-full aspect-square md:aspect-auto md:h-[500px] rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(var(--primary),0.3)] bg-[#05060A] transform-gpu group cursor-pointer flex items-center justify-center"
               style={{ transformStyle: "preserve-3d" }}
             >
-              {/* Abstract 3D Data Core */}
-              <div className="relative w-56 h-56 md:w-72 md:h-72 flex items-center justify-center" style={{ transformStyle: "preserve-3d" }}>
+              {/* Abstract 3D Data Core with Color Animation */}
+              <motion.div 
+                className="relative w-56 h-56 md:w-72 md:h-72 flex items-center justify-center" 
+                style={{ transformStyle: "preserve-3d" }}
+                animate={{ filter: ["hue-rotate(0deg)", "hue-rotate(360deg)"] }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              >
                 {/* Deep Background Glow */}
                 <motion.div
                   animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-0 m-auto w-32 h-32 bg-primary/40 rounded-full blur-3xl pointer-events-none"
+                  className="absolute inset-0 m-auto w-32 h-32 bg-primary/60 rounded-full blur-3xl pointer-events-none"
                 />
 
                 {/* Inner Bright Orb */}
@@ -140,7 +145,7 @@ export default function Home() {
                 {[...Array(6)].map((_, i) => (
                   <motion.div
                     key={i}
-                    className="absolute inset-0 m-auto w-full h-full border border-primary/30 rounded-full"
+                    className="absolute inset-0 m-auto w-full h-full border border-primary/40 rounded-full"
                     style={{
                       rotateZ: i * 30,
                       transformStyle: "preserve-3d"
@@ -174,17 +179,10 @@ export default function Home() {
                     className="absolute -bottom-2 right-1/4 w-3 h-3 bg-purple-500 rounded-full shadow-[0_0_15px_#a855f7]"
                   />
                 </motion.div>
-              </div>
+              </motion.div>
 
               {/* High-Tech Grid Overlay */}
               <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000_60%,transparent_100%)] opacity-50 pointer-events-none" />
-
-              {/* Scanning Laser Line */}
-              <motion.div
-                animate={{ top: ["0%", "100%", "0%"] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                className="absolute left-0 right-0 h-px bg-primary/60 shadow-[0_0_20px_rgba(var(--primary),1)] z-10 pointer-events-none"
-              />
               
               {/* Fake System Output */}
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between z-20 pointer-events-none">
@@ -196,35 +194,6 @@ export default function Home() {
                 <div className="text-[10px] font-mono text-primary/80 tracking-widest uppercase">
                   Nexus.Core // Online
                 </div>
-              </div>
-            </motion.div>
-
-            {/* Floating UI Badges */}
-            <motion.div 
-              animate={{ y: [10, -10, 10], x: [0, 5, 0] }} 
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl shadow-2xl flex items-center gap-4 z-20"
-            >
-              <div className="bg-green-500/20 p-3 rounded-full border border-green-500/30">
-                <LineChart className="text-green-400 w-6 h-6" />
-              </div>
-              <div>
-                <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Conversion Rate</p>
-                <p className="text-xl font-extrabold text-white">+245%</p>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              animate={{ y: [-15, 15, -15], x: [0, -5, 0] }} 
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl shadow-2xl flex items-center gap-4 z-20"
-            >
-              <div className="bg-primary/20 p-3 rounded-full border border-primary/30">
-                <Code2 className="text-primary w-6 h-6" />
-              </div>
-              <div>
-                <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">System Uptime</p>
-                <p className="text-xl font-extrabold text-white">99.99%</p>
               </div>
             </motion.div>
           </motion.div>
