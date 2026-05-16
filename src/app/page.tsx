@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -30,7 +31,47 @@ const services = [
   },
 ];
 
+const testimonials = [
+  {
+    quote: "MaxSolutionz completely transformed our digital presence. Their team understood our unique challenges and delivered a highly optimized e-commerce platform that increased our conversion rate by 45% in just three months. The ROI has far exceeded our expectations.",
+    name: "Sarah Jenkins",
+    role: "Director of E-Commerce",
+    company1: "RETAIL",
+    company2: "TECH",
+    icon: <Users className="w-6 h-6 text-primary" />
+  },
+  {
+    quote: "Their attention to detail and technical expertise is unmatched. We needed a complex custom software solution for our logistics network, and they delivered it ahead of schedule. The platform is robust, scalable, and has drastically improved our operational efficiency.",
+    name: "Michael Chen",
+    role: "Chief Technology Officer",
+    company1: "LOGIS",
+    company2: "TICS",
+    icon: <Globe2 className="w-6 h-6 text-primary" />
+  },
+  {
+    quote: "Working with MaxSolutionz was the best decision we made for our startup. They didn't just build a website; they built a comprehensive digital marketing machine. Our organic traffic has tripled since we launched the new SEO-optimized platform.",
+    name: "Amanda Rivera",
+    role: "Founder & CEO",
+    company1: "START",
+    company2: "UP",
+    icon: <LineChart className="w-6 h-6 text-primary" />
+  }
+];
+
 export default function Home() {
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextTestimonial = () => {
+    setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden bg-background text-foreground">
       <script
@@ -413,6 +454,99 @@ export default function Home() {
                 </Card>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 relative overflow-hidden bg-background">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
+        
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
+              Testimonials
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">
+              Real Results from <br/> MaxSolutionz Implementation
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Don't just take our word for it. Here's what our clients have to say about their experience working with our dedicated teams.
+            </p>
+          </motion.div>
+
+          <div className="relative max-w-4xl mx-auto mt-12 mb-12 perspective-1000">
+            <motion.div 
+              initial={{ opacity: 0, y: 50, rotateX: 10 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, type: "spring" }}
+              style={{ transformStyle: "preserve-3d" }}
+            >
+              {/* Stacked Layer 2 (Bottom-most) */}
+              <div className="absolute -bottom-8 left-[4%] right-[4%] h-full bg-[#0D1F1E]/30 rounded-[2rem] -z-20 border border-white/5 backdrop-blur-sm shadow-xl transition-transform duration-500 hover:translate-y-2" />
+              {/* Stacked Layer 1 (Middle) */}
+              <div className="absolute -bottom-4 left-[2%] right-[2%] h-full bg-[#0D1F1E]/60 rounded-[2rem] -z-10 border border-white/5 backdrop-blur-md shadow-2xl transition-transform duration-500 hover:translate-y-1" />
+              
+              {/* Main Card */}
+              <div 
+                className="bg-[#051614] border border-[#2D4A46] p-8 md:p-14 rounded-[2rem] text-white relative z-10 shadow-[0_20px_50px_rgba(26,236,187,0.1)] hover:shadow-[0_20px_60px_rgba(26,236,187,0.15)] transition-shadow duration-500 cursor-pointer overflow-hidden pb-16"
+                onClick={nextTestimonial}
+              >
+                <AnimatePresence mode="wait">
+                  <motion.div 
+                    key={activeTestimonial}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col md:flex-row gap-8 justify-between items-center md:items-stretch"
+                  >
+                    <div className="flex-1 space-y-8">
+                      <p className="text-xl md:text-2xl font-medium leading-relaxed min-h-[140px] md:min-h-[120px]">
+                        "{testimonials[activeTestimonial].quote}"<span className="inline-block w-2 h-2 rounded-full bg-primary ml-1 shadow-[0_0_10px_rgba(26,236,187,0.8)] animate-pulse"></span>
+                      </p>
+                      
+                      <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center border border-primary/30 overflow-hidden relative shadow-[0_0_15px_rgba(26,236,187,0.2)]">
+                          {testimonials[activeTestimonial].icon}
+                        </div>
+                        <div>
+                          <h4 className="text-xl font-bold text-white">{testimonials[activeTestimonial].name}</h4>
+                          <p className="text-[#C9E4DD] text-sm opacity-90">{testimonials[activeTestimonial].role}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-end justify-end md:justify-center border-t border-white/10 md:border-t-0 md:border-l md:pl-10 md:ml-2 pt-6 md:pt-0 min-w-[150px]">
+                      <div className="text-2xl font-black tracking-widest text-white/30 hover:text-white/60 transition-colors uppercase flex flex-col items-end md:items-start justify-end h-full">
+                        <div className="mb-2 opacity-50 w-10 h-10 flex items-center justify-center">
+                          {testimonials[activeTestimonial].icon}
+                        </div>
+                        <span className="tracking-[0.2em]">{testimonials[activeTestimonial].company1}</span>
+                        <span className="text-primary tracking-[0.2em]">{testimonials[activeTestimonial].company2}</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+                
+                {/* Carousel Indicators */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+                  {testimonials.map((_, idx) => (
+                    <div 
+                      key={idx} 
+                      className={`h-1.5 rounded-full transition-all duration-300 ${idx === activeTestimonial ? "w-6 bg-primary" : "w-1.5 bg-white/20"}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
