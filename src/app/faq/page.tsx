@@ -51,7 +51,7 @@ export default function FAQPage() {
               <Accordion className="w-full">
                 {faqs.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="border-white/10">
-                    <AccordionTrigger className="text-left text-lg hover:text-primary transition-colors">
+                    <AccordionTrigger className="text-left text-lg text-white hover:text-primary transition-colors">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground text-base leading-relaxed">

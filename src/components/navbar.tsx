@@ -18,7 +18,6 @@ export function Navbar() {
     { href: '/services', label: 'Services' },
     { href: '/projects', label: 'Projects' },
     { href: '/faq', label: 'FAQs' },
-    { href: '/contact', label: 'Contact' },
   ];
 
   return (
@@ -63,8 +62,11 @@ export function Navbar() {
           </div>
           
           <div className="hidden md:flex items-center gap-4">
-            <Button render={<Link href="/contact" />} className="rounded-full shadow-md shadow-primary/20 hover:shadow-primary/40 hover:scale-105 transition-all duration-300">
-              Get a Quote
+            <Button variant="outline" asChild className="rounded-full border-white/20 hover:bg-white/10 text-white transition-all duration-300">
+              <Link href="/contact">Book Free Consultation</Link>
+            </Button>
+            <Button asChild className="rounded-full bg-primary text-primary-foreground shadow-md shadow-primary/20 hover:shadow-primary/40 hover:scale-105 transition-all duration-300">
+              <Link href="/contact">Get a Quote</Link>
             </Button>
           </div>
 
@@ -102,14 +104,25 @@ export function Navbar() {
                   </Link>
                 );
               })}
-              <Button 
-                size="lg" 
-                render={<Link href="/contact" />} 
-                className="mt-8 rounded-xl h-14 text-lg w-full shadow-lg shadow-primary/20"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Get a Quote
-              </Button>
+              <div className="flex flex-col gap-3 mt-8">
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  asChild 
+                  className="rounded-xl h-14 text-lg w-full border-white/20 text-white hover:bg-white/10"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Link href="/contact">Book Free Consultation</Link>
+                </Button>
+                <Button 
+                  size="lg" 
+                  asChild 
+                  className="rounded-xl h-14 text-lg w-full bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Link href="/contact">Get a Quote</Link>
+                </Button>
+              </div>
             </div>
           </motion.div>
         )}
