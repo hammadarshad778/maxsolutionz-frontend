@@ -18,7 +18,7 @@ export default function FAQPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema()) }}
       />
-      <div className="container px-4 py-32 md:py-48 max-w-4xl mx-auto min-h-screen">
+      <div className="container px-4 py-32 md:py-48 max-w-7xl mx-auto min-h-screen">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}

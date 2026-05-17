@@ -75,7 +75,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 3000);
+    }, 10000);
     return () => clearInterval(timer);
   }, []);
 
@@ -100,7 +100,7 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto max-w-5xl relative z-10 flex flex-col items-center">
-          
+
           {/* Floating Glass Badge */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -124,7 +124,7 @@ export default function Home() {
             className="space-y-6 max-w-4xl"
           >
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.1]">
-              Architecting <br className="hidden md:block" /> 
+              Architecting <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-blue-500 drop-shadow-[0_0_30px_rgba(26,236,187,0.3)]">
                 Digital Dominance
               </span>
@@ -153,7 +153,7 @@ export default function Home() {
                 </Link>
               </Button>
             </motion.div>
-            
+
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto relative group">
               <div className="absolute -inset-1 bg-white/5 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
               <Button size="lg" variant="outline" asChild className="w-full sm:w-auto h-16 px-10 text-lg border-white/20 hover:border-white/50 relative bg-white/5 backdrop-blur-sm text-gray-300 hover:text-white hover:bg-white/10 font-medium tracking-wide">
@@ -174,8 +174,8 @@ export default function Home() {
           className="absolute right-[-5%] top-[20%] opacity-20 pointer-events-none -z-10 hidden lg:block"
         >
           <div className="w-64 h-64 border border-primary/30 rounded-full flex items-center justify-center relative">
-             <div className="w-48 h-48 border border-blue-500/30 rounded-full" />
-             <div className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent rotate-45" />
+            <div className="w-48 h-48 border border-blue-500/30 rounded-full" />
+            <div className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent rotate-45" />
           </div>
         </motion.div>
 
@@ -187,7 +187,7 @@ export default function Home() {
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hidden md:flex"
         >
           <span className="text-xs uppercase tracking-widest font-semibold opacity-70">Scroll to Explore</span>
-          <motion.div 
+          <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1"
@@ -199,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* Hire Dedicated Developers Section (SEO Keywords) */}
-      <section className="py-24 bg-black/40 border-y border-white/5 relative overflow-hidden">
+      <section className="py-24 bg-black/40 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -257,7 +257,7 @@ export default function Home() {
       </section>
 
       {/* Specialized E-Commerce Solutions (SEO Keywords) */}
-      <section className="py-24 relative">
+      <section className="py-24 relative bg-black/40 bg-background">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <motion.div
             className="text-center mb-16"
@@ -308,7 +308,7 @@ export default function Home() {
       </section>
 
       {/* Global Reach Section (SEO Keywords) */}
-      <section className="py-24 bg-primary/5 border-y border-primary/10">
+      <section className="py-24 relative bg-black/40 bg-background">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -357,7 +357,7 @@ export default function Home() {
       </section>
 
       {/* Services Snippet (Existing, updated to 3D) */}
-      <section className="py-24 relative bg-background">
+      <section className="py-24 relative bg-black/40 bg-background">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <motion.div
             className="text-center mb-16"
@@ -413,7 +413,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 relative overflow-hidden bg-background">
+      <section className="py-24 relative bg-black/40 overflow-hidden bg-background">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
@@ -506,8 +506,8 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 relative bg-black/40 border-y border-white/5">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+      <section className="py-24 relative bg-black/40">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -546,45 +546,55 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 relative overflow-hidden text-center">
-        <motion.div
-          className="absolute inset-0 bg-primary/10 -z-10"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        />
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-        <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
-
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl relative z-10">
-          <motion.h2
-            className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            Ready to Build Something Extraordinary?
-          </motion.h2>
-          <motion.p
-            className="text-xl text-[#8892B0] mx-auto mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Contact us today to discuss how we can help you achieve your digital goals. Build your team, scale your infrastructure, and dominate your market.
-          </motion.p>
+      <section className="py-24 relative overflow-hidden bg-black/40 bg-background">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.8 }}
+            className="relative w-full rounded-[2.5rem] overflow-hidden border border-white/10 bg-[#0A0C10] p-8 md:p-16 lg:p-20 text-center shadow-2xl"
           >
-            <Button size="lg" asChild className="h-16 px-10 text-xl font-medium shadow-[0_0_30px_rgba(var(--primary),0.3)] hover:shadow-[0_0_50px_rgba(var(--primary),0.5)] hover:scale-105 transition-all">
-              <Link href="/contact">Start a Project</Link>
-            </Button>
+            {/* Background Effects */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-[300px] bg-primary/20 blur-[120px] rounded-full mix-blend-screen pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 blur-[100px] rounded-full mix-blend-screen pointer-events-none" />
+
+            <div className="relative z-10 flex flex-col items-center w-full">
+              <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-8 shadow-[0_0_20px_rgba(26,236,187,0.15)]">
+                <span className="relative flex h-2 w-2 mr-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                Let's Collaborate
+              </div>
+
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white max-w-3xl leading-tight">
+                Ready to Build Something <br className="hidden md:block" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-blue-400">Extraordinary?</span>
+              </h2>
+
+              <p className="text-lg md:text-xl text-[#8892B0] max-w-2xl mx-auto mb-10 leading-relaxed">
+                Transform your digital presence with our cutting-edge development teams. Scale your infrastructure, optimize for conversions, and dominate your market.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center gap-4">
+                <Button size="lg" asChild className="h-14 px-8 text-lg font-bold shadow-[0_0_30px_rgba(26,236,187,0.3)] hover:shadow-[0_0_50px_rgba(26,236,187,0.5)] hover:scale-105 transition-all bg-primary text-primary-foreground border-none">
+                  <Link href="/contact">
+                    Start a Project
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild className="h-14 px-8 text-lg font-medium border-white/20 bg-white/5 hover:bg-white/10 hover:text-white transition-all text-gray-300">
+                  <Link href="/services">
+                    Explore Services
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Decorative border gradients */}
+            <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+            <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
           </motion.div>
         </div>
       </section>

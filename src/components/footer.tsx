@@ -37,19 +37,19 @@ export function Footer() {
   ];
 
   return (
-    <footer className="relative overflow-hidden bg-background pt-20 pb-10 border-t border-white/5">
+    <footer className="relative overflow-hidden bg-background pt-8 pb-4 border-t border-white/5">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[200px] bg-primary/10 blur-[100px] rounded-full -z-10 pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-6 max-w-screen-2xl relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 mb-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-2 space-y-6"
+            className="lg:col-span-2 space-y-4"
           >
             <Link href="/" className="flex items-center space-x-2 group w-fit">
               <Image
@@ -79,8 +79,8 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h4 className="font-bold text-lg mb-6 tracking-tight text-foreground/90">Services</h4>
-            <ul className="space-y-4 text-sm text-muted-foreground">
+            <h4 className="font-bold text-lg mb-4 tracking-tight text-foreground/90">Services</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
               {[
                 { name: 'WordPress Design', href: '/services/wordpress-design' },
                 { name: 'WooCommerce Stores', href: '/services/woocommerce-stores' },
@@ -103,8 +103,8 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h4 className="font-bold text-lg mb-6 tracking-tight text-foreground/90">Company</h4>
-            <ul className="space-y-4 text-sm text-muted-foreground">
+            <h4 className="font-bold text-lg mb-4 tracking-tight text-foreground/90">Company</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
               {['About Us', 'Contact', 'FAQs'].map((item, i) => {
                 const href = item === 'About Us' ? '/about' : `/${item.toLowerCase().replace('s', '')}`;
                 return (
@@ -125,8 +125,8 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h4 className="font-bold text-lg mb-6 tracking-tight text-foreground/90">Get in Touch</h4>
-            <ul className="space-y-4 text-sm text-muted-foreground">
+            <h4 className="font-bold text-lg mb-4 tracking-tight text-foreground/90">Get in Touch</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <span>444 Alaska Avenue<br />Torrance, CA 90503, USA</span>
@@ -148,7 +148,7 @@ export function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground"
+          className="pt-4 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground"
         >
           <p>&copy; {new Date().getFullYear()} MaxSolutionz. All rights reserved.</p>
           <div className="flex gap-6">
