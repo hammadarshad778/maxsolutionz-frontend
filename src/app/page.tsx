@@ -5,30 +5,40 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, Code2, LineChart, Search, ShoppingCart, Users, Globe2, ShieldCheck, CheckCircle2, Layout, Smartphone, Database, Cloud } from "lucide-react";
+import { ArrowRight, Code2, LineChart, Search, ShoppingCart, Users, Globe2, ShieldCheck, CheckCircle2, Layout, Smartphone, Database, Cloud, MonitorSmartphone, BarChart3, Layers } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { faqs, generateFAQSchema } from "@/data/faqs";
 
 const services = [
   {
-    title: "Web Development",
-    description: "Custom, responsive, and high-performance websites built with the latest technologies like Next.js and NestJS.",
-    icon: <Code2 className="h-8 w-8 text-primary" />,
+    title: "High-Performance WordPress Design",
+    description: "Bespoke, lightning-fast WordPress architectures designed for enterprise scalability, advanced security, and seamless content management.",
+    icon: <MonitorSmartphone className="h-8 w-8 text-primary" />,
     image: "/hero.png",
+    href: "/services/wordpress-design"
   },
   {
-    title: "Digital Marketing",
-    description: "Data-driven marketing strategies to increase your brand's visibility and conversion rates.",
-    icon: <LineChart className="h-8 w-8 text-primary" />,
+    title: "Conversion-Focused WooCommerce Stores",
+    description: "Data-driven e-commerce platforms engineered to minimize cart abandonment, maximize AOV, and provide frictionless shopping experiences.",
+    icon: <ShoppingCart className="h-8 w-8 text-primary" />,
     image: "/marketing.png",
+    href: "/services/woocommerce-stores"
   },
   {
-    title: "SEO Optimization",
-    description: "Improve your search engine rankings and drive organic traffic to your website with our proven SEO techniques.",
-    icon: <Search className="h-8 w-8 text-primary" />,
+    title: "Strategic E-commerce Digitalization",
+    description: "End-to-end digital transformation for retail brands, integrating analytics, CRM, and automation to scale operations globally.",
+    icon: <BarChart3 className="h-8 w-8 text-primary" />,
     image: "/seo.png",
+    href: "/services/ecommerce-digitalization"
   },
+  {
+    title: "Advanced Full-Stack Development",
+    description: "Custom software solutions built with modern stacks (React, Next.js, Node.js) to solve complex business challenges with robust APIs.",
+    icon: <Layers className="h-8 w-8 text-primary" />,
+    image: "/hero.png",
+    href: "/services/fullstack-development"
+  }
 ];
 
 const testimonials = [
@@ -58,6 +68,7 @@ const testimonials = [
   }
 ];
 
+
 export default function Home() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
@@ -73,180 +84,118 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden bg-background text-foreground">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema()) }}
       />
-      
+
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center text-center px-4 pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden -z-10">
-          <motion.div
-            animate={{
-              scale: [1, 1.2, 1],
-              rotate: [0, 90, 0],
-              opacity: [0.3, 0.2, 0.3],
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-            className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/30 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
-          />
-          <motion.div
-            animate={{
-              scale: [1, 1.5, 1],
-              rotate: [0, -90, 0],
-              opacity: [0.2, 0.4, 0.2],
-            }}
-            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-            className="absolute top-1/3 -right-32 w-96 h-96 bg-blue-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-          />
+      <section className="relative flex flex-col items-center justify-center text-center px-4 pt-40 pb-32 md:pt-56 md:pb-40 overflow-hidden min-h-[90vh]">
+        {/* Dynamic Background Elements */}
+        <div className="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
+
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-primary/20 rounded-full blur-[150px] opacity-50 mix-blend-screen" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[300px] bg-blue-500/20 rounded-full blur-[120px] opacity-40 mix-blend-screen" />
         </div>
-        
-        <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
-        
-        <div className="container mx-auto max-w-7xl relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <div className="container mx-auto max-w-5xl relative z-10 flex flex-col items-center">
+          
+          {/* Floating Glass Badge */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="space-y-8 text-left"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-5 py-2 text-sm font-medium text-white mb-8 shadow-2xl shadow-primary/10 hover:bg-white/10 hover:scale-105 transition-all cursor-pointer group"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4"
-            >
-              🚀 The Ultimate E-commerce & Web Experts
-            </motion.div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-              Transforming <br className="hidden md:block"/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-purple-500 animate-gradient-x">Digital Landscapes</span>
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-              MaxSolutionz is a premium custom software and e-commerce development agency. We empower businesses globally to scale with highly optimized, conversion-driven digital platforms.
-            </p>
-            <motion.div 
-              className="flex flex-col sm:flex-row items-center gap-4 pt-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-            >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto relative group">
-                {/* Button Glow Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-blue-500 to-purple-500 rounded-xl blur-md opacity-40 group-hover:opacity-80 transition duration-500 group-hover:duration-200 animate-pulse" />
-                <Button size="lg" asChild className="w-full sm:w-auto h-14 px-8 text-lg relative bg-background border border-primary/30 hover:bg-primary/10 overflow-hidden">
-                  <Link href="/services">
-                    {/* Sweeping Light Animation */}
-                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-[shimmer_1.5s_infinite]" />
-                    <span className="relative z-10 flex items-center text-white font-semibold">
-                      Explore Services
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </Link>
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto relative group">
-                <div className="absolute -inset-1 bg-white/5 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition duration-500" />
-                <Button size="lg" variant="outline" asChild className="w-full sm:w-auto h-14 px-8 text-lg border-primary/20 hover:border-primary/50 relative bg-background/50 backdrop-blur-sm text-gray-300 hover:text-white">
-                  <Link href="/contact">Hire Experts</Link>
-                </Button>
-              </motion.div>
-            </motion.div>
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            <span className="text-gray-300">Trusted by 100+ Brands Worldwide</span>
+            <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
           </motion.div>
 
+          {/* Main Headline */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, rotateY: -20 }}
-            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-            transition={{ delay: 0.3, duration: 1, type: "spring", stiffness: 50 }}
-            className="relative lg:ml-auto w-full max-w-lg perspective-1000"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1, duration: 0.8, ease: "easeOut" }}
+            className="space-y-6 max-w-4xl"
           >
-            <div className="absolute -inset-4 bg-gradient-to-tr from-primary via-purple-500 to-blue-500 rounded-full blur-3xl opacity-30 animate-pulse" />
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.1]">
+              Architecting <br className="hidden md:block" /> 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-blue-500 drop-shadow-[0_0_30px_rgba(26,236,187,0.3)]">
+                Digital Dominance
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-[#8892B0] leading-relaxed max-w-2xl mx-auto font-light">
+              We engineer high-performance software and conversion-optimized e-commerce platforms that scale your business to new heights.
+            </p>
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+          >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-blue-500 to-primary rounded-xl blur opacity-60 group-hover:opacity-100 transition duration-500 animate-gradient-x" />
+              <Button size="lg" asChild className="w-full sm:w-auto h-16 px-10 text-lg relative bg-background border border-primary/50 overflow-hidden text-white hover:bg-transparent">
+                <Link href="/services">
+                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-[shimmer_1.5s_infinite]" />
+                  <span className="relative z-10 flex items-center font-bold tracking-wide">
+                    Explore Solutions
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </Button>
+            </motion.div>
             
-            <motion.div 
-              animate={{ 
-                y: [-10, 10, -10],
-                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-              }} 
-              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-              whileHover={{ rotateX: 10, rotateY: -10, scale: 1.05 }}
-              className="relative w-full aspect-square md:aspect-auto md:h-[500px] rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(var(--primary),0.3)] transform-gpu group cursor-pointer flex items-center justify-center bg-gradient-to-r from-[#05060A] via-primary/20 to-[#05060A] bg-[length:200%_200%]"
-              style={{ transformStyle: "preserve-3d" }}
-            >
-              {/* Technology World Structure */}
-              <div className="relative w-[280px] h-[280px] md:w-[340px] md:h-[340px] flex items-center justify-center mt-12">
-                
-                {/* Central Massive Glowing Globe */}
-                <motion.div
-                  animate={{ scale: [1, 1.05, 1], filter: ["hue-rotate(0deg)", "hue-rotate(360deg)"] }}
-                  transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-0 m-auto w-40 h-40 md:w-48 md:h-48 bg-blue-900/40 border-[3px] border-blue-500 shadow-[0_0_60px_rgba(59,130,246,0.6)] rounded-full flex items-center justify-center z-10 overflow-hidden"
-                >
-                  <Image 
-                    src="/tech-world.png" 
-                    alt="Digital Technology World" 
-                    fill 
-                    className="object-cover scale-[1.3]" 
-                    priority
-                  />
-                  {/* Overlay to blend image into the theme */}
-                  <div className="absolute inset-0 bg-blue-500/20 mix-blend-overlay rounded-full pointer-events-none" />
-                </motion.div>
-
-                {/* The Arch (Semi Circle) */}
-                <div className="absolute inset-0 rounded-full border-[2px] border-t-blue-500/40 border-l-blue-500/40 border-r-blue-500/40 border-b-transparent border-dashed -mt-16" />
-
-                {/* Orbiting Service Icons */}
-                {[
-                  { icon: <Search className="w-6 h-6 text-cyan-400" />, angle: -90, label: "SEO" },
-                  { icon: <Layout className="w-6 h-6 text-green-400" />, angle: -45, label: "Design" },
-                  { icon: <Code2 className="w-6 h-6 text-blue-400" />, angle: 0, label: "Web Dev" },
-                  { icon: <ShoppingCart className="w-6 h-6 text-purple-400" />, angle: 45, label: "E-Comm" },
-                  { icon: <LineChart className="w-6 h-6 text-pink-400" />, angle: 90, label: "Growth" },
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    className="absolute inset-0 -mt-16"
-                    style={{ transform: `rotate(${item.angle}deg)` }}
-                  >
-                    {/* The Icon Container */}
-                    <motion.div 
-                      className="absolute top-0 left-1/2 -ml-7 -mt-7 w-14 h-14 bg-[#05060A] border-[2px] border-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.6)] rounded-full flex items-center justify-center z-20 cursor-pointer group"
-                      style={{ transform: `rotate(${-item.angle}deg)` }}
-                      whileHover={{ scale: 1.15, backgroundColor: "rgba(59,130,246,0.2)" }}
-                    >
-                      {item.icon}
-                      
-                      {/* Tooltip */}
-                      <div className="absolute -bottom-8 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-xs font-bold text-white bg-blue-900/80 px-2 py-1 rounded border border-blue-500/50 pointer-events-none">
-                        {item.label}
-                      </div>
-                    </motion.div>
-
-                    {/* Connecting line to center */}
-                    <motion.div 
-                      className="absolute top-7 left-1/2 w-[2px] h-[calc(50%-5rem)] md:h-[calc(50%-6rem)] origin-top"
-                      style={{ background: "linear-gradient(to bottom, rgba(59,130,246,0.8), transparent)" }}
-                      animate={{ opacity: [0.3, 1, 0.3] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: i * 0.4 }}
-                    />
-                    
-                    {/* Moving pulse along the line */}
-                    <motion.div 
-                      className="absolute left-1/2 w-1.5 h-4 bg-white rounded-full blur-[1px] -ml-[3px]"
-                      animate={{ top: ["28px", "calc(50% - 4rem)"] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: i * 0.4, ease: "linear" }}
-                    />
-                  </div>
-                ))}
-              </div>
-
-              {/* High-Tech Grid Overlay */}
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000_60%,transparent_100%)] opacity-50 pointer-events-none" />
-              
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto relative group">
+              <div className="absolute -inset-1 bg-white/5 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
+              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto h-16 px-10 text-lg border-white/20 hover:border-white/50 relative bg-white/5 backdrop-blur-sm text-gray-300 hover:text-white hover:bg-white/10 font-medium tracking-wide">
+                <Link href="/contact">Book Consultation</Link>
+              </Button>
             </motion.div>
           </motion.div>
+
         </div>
+
+        {/* Floating Abstract 3D Element behind text */}
+        <motion.div
+          animate={{
+            y: [-20, 20, -20],
+            rotateZ: [0, 5, 0],
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute right-[-5%] top-[20%] opacity-20 pointer-events-none -z-10 hidden lg:block"
+        >
+          <div className="w-64 h-64 border border-primary/30 rounded-full flex items-center justify-center relative">
+             <div className="w-48 h-48 border border-blue-500/30 rounded-full" />
+             <div className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent rotate-45" />
+          </div>
+        </motion.div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 1 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hidden md:flex"
+        >
+          <span className="text-xs uppercase tracking-widest font-semibold opacity-70">Scroll to Explore</span>
+          <motion.div 
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1"
+          >
+            <div className="w-1 h-2 bg-primary rounded-full" />
+          </motion.div>
+        </motion.div>
+
       </section>
 
       {/* Hire Dedicated Developers Section (SEO Keywords) */}
@@ -310,7 +259,7 @@ export default function Home() {
       {/* Specialized E-Commerce Solutions (SEO Keywords) */}
       <section className="py-24 relative">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -410,7 +359,7 @@ export default function Home() {
       {/* Services Snippet (Existing, updated to 3D) */}
       <section className="py-24 relative bg-background">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -422,7 +371,7 @@ export default function Home() {
               We specialize in creating comprehensive digital solutions tailored to your unique business needs and growth objectives.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 perspective-1000">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 perspective-1000">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -434,24 +383,29 @@ export default function Home() {
                 style={{ transformStyle: "preserve-3d" }}
                 className="h-full"
               >
-                <Card className="h-full bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl border-white/10 hover:border-primary/50 transition-all duration-500 shadow-2xl relative overflow-hidden group">
-                  <div className="h-48 overflow-hidden relative border-b border-white/5">
-                    <Image src={service.image} alt={service.title} fill className="object-cover transform group-hover:scale-110 transition-transform duration-700" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                  <CardHeader className="relative z-10 pt-0">
-                    <div className="-mt-8 mb-2 relative z-20 bg-[#11131A] w-14 h-14 rounded-xl flex items-center justify-center shadow-lg border border-white/10 group-hover:border-primary/40 group-hover:scale-110 transition-all duration-300">
-                      {service.icon}
+                <Link href={service.href} className="block h-full group">
+                  <Card className="h-full bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl border-white/10 hover:border-primary/50 transition-all duration-500 shadow-2xl relative overflow-hidden group-hover:shadow-[0_15px_40px_rgba(var(--primary),0.2)]">
+                    <div className="h-48 overflow-hidden relative border-b border-white/5">
+                      <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                     </div>
-                    <CardTitle className="text-2xl mt-2 text-white">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="relative z-10">
-                    <CardDescription className="text-base text-[#8892B0] leading-relaxed">
-                      {service.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                    <CardHeader className="relative z-10 pt-0">
+                      <div className="-mt-8 mb-2 relative z-20 bg-[#11131A] w-14 h-14 rounded-xl flex items-center justify-center shadow-lg border border-white/10 group-hover:border-primary/40 group-hover:scale-110 transition-all duration-300">
+                        {service.icon}
+                      </div>
+                      <CardTitle className="text-2xl mt-2 text-white group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="relative z-10 flex flex-col flex-grow">
+                      <CardDescription className="text-base text-[#8892B0] leading-relaxed flex-grow">
+                        {service.description}
+                      </CardDescription>
+                      <div className="mt-6 flex items-center text-primary font-medium group-hover:translate-x-2 transition-transform duration-300">
+                        Explore this service <ArrowRight className="ml-2 w-5 h-5" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -461,9 +415,9 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-24 relative overflow-hidden bg-background">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
-        
+
         <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -474,7 +428,7 @@ export default function Home() {
               Testimonials
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">
-              Real Results from <br/> MaxSolutionz Implementation
+              Real Results from <br /> MaxSolutionz Implementation
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Don't just take our word for it. Here's what our clients have to say about their experience working with our dedicated teams.
@@ -482,7 +436,7 @@ export default function Home() {
           </motion.div>
 
           <div className="relative max-w-4xl mx-auto mt-12 mb-12 perspective-1000">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 50, rotateX: 10 }}
               whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
               viewport={{ once: true }}
@@ -493,14 +447,14 @@ export default function Home() {
               <div className="absolute -bottom-8 left-[4%] right-[4%] h-full bg-[#0D1F1E]/30 rounded-[2rem] -z-20 border border-white/5 backdrop-blur-sm shadow-xl transition-transform duration-500 hover:translate-y-2" />
               {/* Stacked Layer 1 (Middle) */}
               <div className="absolute -bottom-4 left-[2%] right-[2%] h-full bg-[#0D1F1E]/60 rounded-[2rem] -z-10 border border-white/5 backdrop-blur-md shadow-2xl transition-transform duration-500 hover:translate-y-1" />
-              
+
               {/* Main Card */}
-              <div 
+              <div
                 className="bg-[#051614] border border-[#2D4A46] p-8 md:p-14 rounded-[2rem] text-white relative z-10 shadow-[0_20px_50px_rgba(26,236,187,0.1)] hover:shadow-[0_20px_60px_rgba(26,236,187,0.15)] transition-shadow duration-500 cursor-pointer overflow-hidden pb-16"
                 onClick={nextTestimonial}
               >
                 <AnimatePresence mode="wait">
-                  <motion.div 
+                  <motion.div
                     key={activeTestimonial}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -512,7 +466,7 @@ export default function Home() {
                       <p className="text-xl md:text-2xl font-medium leading-relaxed min-h-[140px] md:min-h-[120px]">
                         "{testimonials[activeTestimonial].quote}"<span className="inline-block w-2 h-2 rounded-full bg-primary ml-1 shadow-[0_0_10px_rgba(26,236,187,0.8)] animate-pulse"></span>
                       </p>
-                      
+
                       <div className="flex items-center gap-4">
                         <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center border border-primary/30 overflow-hidden relative shadow-[0_0_15px_rgba(26,236,187,0.2)]">
                           {testimonials[activeTestimonial].icon}
@@ -535,12 +489,12 @@ export default function Home() {
                     </div>
                   </motion.div>
                 </AnimatePresence>
-                
+
                 {/* Carousel Indicators */}
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
                   {testimonials.map((_, idx) => (
-                    <div 
-                      key={idx} 
+                    <div
+                      key={idx}
                       className={`h-1.5 rounded-full transition-all duration-300 ${idx === activeTestimonial ? "w-6 bg-primary" : "w-1.5 bg-white/20"}`}
                     />
                   ))}
@@ -554,7 +508,7 @@ export default function Home() {
       {/* FAQ Section */}
       <section className="py-24 relative bg-black/40 border-y border-white/5">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -564,7 +518,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Frequently Asked Questions</h2>
             <p className="text-lg text-muted-foreground">Find answers to common questions about our development and hiring processes.</p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -593,7 +547,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-32 relative overflow-hidden text-center">
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-primary/10 -z-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -602,9 +556,9 @@ export default function Home() {
         />
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
         <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
-        
+
         <div className="container mx-auto px-4 md:px-6 max-w-4xl relative z-10">
-          <motion.h2 
+          <motion.h2
             className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -613,7 +567,7 @@ export default function Home() {
           >
             Ready to Build Something Extraordinary?
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-xl text-[#8892B0] mx-auto mb-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

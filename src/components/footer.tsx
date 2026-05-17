@@ -42,8 +42,8 @@ export function Footer() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[200px] bg-primary/10 blur-[100px] rounded-full -z-10 pointer-events-none" />
 
-      <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+      <div className="container mx-auto px-4 md:px-6 max-w-screen-2xl relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,6 +58,7 @@ export function Footer() {
                 width={200}
                 height={60}
                 className="h-12 w-auto group-hover:scale-105 transition-transform"
+                style={{ width: 'auto' }}
               />
             </Link>
             <p className="text-muted-foreground text-base max-w-md leading-relaxed">
@@ -80,11 +81,16 @@ export function Footer() {
           >
             <h4 className="font-bold text-lg mb-6 tracking-tight text-foreground/90">Services</h4>
             <ul className="space-y-4 text-sm text-muted-foreground">
-              {['Web Development', 'Digital Marketing', 'SEO Optimization', 'Mobile Apps'].map((service, i) => (
+              {[
+                { name: 'WordPress Design', href: '/services/wordpress-design' },
+                { name: 'WooCommerce Stores', href: '/services/woocommerce-stores' },
+                { name: 'E-commerce Digitalization', href: '/services/ecommerce-digitalization' },
+                { name: 'Full-Stack Development', href: '/services/fullstack-development' }
+              ].map((service, i) => (
                 <li key={i}>
-                  <Link href="/services" className="group flex items-center hover:text-primary transition-colors">
+                  <Link href={service.href} className="group flex items-center hover:text-primary transition-colors">
                     <span className="h-px w-0 bg-primary mr-0 group-hover:w-4 group-hover:mr-3 transition-all duration-300" />
-                    {service}
+                    {service.name}
                   </Link>
                 </li>
               ))}
@@ -98,7 +104,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h4 className="font-bold text-lg mb-6 tracking-tight text-foreground/90">Company</h4>
-            <ul className="space-y-4 text-sm text-muted-foreground mb-8">
+            <ul className="space-y-4 text-sm text-muted-foreground">
               {['About Us', 'Contact', 'FAQs'].map((item, i) => {
                 const href = item === 'About Us' ? '/about' : `/${item.toLowerCase().replace('s', '')}`;
                 return (
@@ -111,12 +117,20 @@ export function Footer() {
                 );
               })}
             </ul>
-            <h4 className="font-bold text-lg mb-4 tracking-tight text-foreground/90">Get in Touch</h4>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <h4 className="font-bold text-lg mb-6 tracking-tight text-foreground/90">Get in Touch</h4>
             <ul className="space-y-4 text-sm text-muted-foreground">
-              {/* <li className="flex items-start gap-3">
+              <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>123 Tech Avenue, Suite 400<br />Innovation City, TX 75001</span>
-              </li> */}
+                <span>444 Alaska Avenue<br />Torrance, CA 90503, USA</span>
+              </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
                 <span>info@maxsolutionz.com</span>

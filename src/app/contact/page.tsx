@@ -63,15 +63,15 @@ export default function ContactPage() {
               <CardDescription className="text-gray-300">We are here to help you.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-8">
-              {/* <div className="flex items-start">
+              <div className="flex items-start">
                 <div className="bg-[#1AECBB]/10 p-3 rounded-full mr-4">
                   <MapPin className="h-6 w-6 text-[#1AECBB] shrink-0" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">Office Location</h4>
-                  <p className="text-sm text-gray-400 mt-1">123 Tech Avenue, Suite 400<br />Innovation City, TX 75001</p>
+                  <p className="text-sm text-gray-400 mt-1">444 Alaska Avenue<br />Torrance, CA 90503, USA</p>
                 </div>
-              </div> */}
+              </div>
               <div className="flex items-start">
                 <div className="bg-[#1AECBB]/10 p-3 rounded-full mr-4">
                   <Mail className="h-6 w-6 text-[#1AECBB] shrink-0" />
