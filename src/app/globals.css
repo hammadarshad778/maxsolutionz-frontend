@@ -144,3 +144,21 @@
   0% { background-position: 0px 0px; }
   100% { background-position: -100px 200px; }
 }
+
+@keyframes marquee-ltr {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-rtl {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee-ltr {
+  animation: marquee-ltr 30s linear infinite;
+}
+
+.animate-marquee-rtl {
+  animation: marquee-rtl 30s linear infinite;
+}

@@ -39,7 +39,7 @@ export default function WordPressDesignPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl"
+            className="max-w-screen-2xl"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6">
               <MonitorSmartphone size={16} /> Web Development Service

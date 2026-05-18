@@ -9,6 +9,7 @@ import { ArrowRight, Code2, LineChart, Search, ShoppingCart, Users, Globe2, Shie
 import Link from "next/link";
 import Image from "next/image";
 import { faqs, generateFAQSchema } from "@/data/faqs";
+import { projects } from "@/data/projects";
 
 const services = [
   {
@@ -95,11 +96,11 @@ export default function Home() {
         {/* Dynamic Background Elements */}
         <div className="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
 
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-primary/20 rounded-full blur-[150px] opacity-50 mix-blend-screen" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[300px] bg-blue-500/20 rounded-full blur-[120px] opacity-40 mix-blend-screen" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-screen-2xl h-[500px] bg-primary/20 rounded-full blur-[150px] opacity-50 mix-blend-screen" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-screen-2xl h-[300px] bg-blue-500/20 rounded-full blur-[120px] opacity-40 mix-blend-screen" />
         </div>
 
-        <div className="container mx-auto max-w-5xl relative z-10 flex flex-col items-center">
+        <div className="container mx-auto max-w-screen-2xl relative z-10 flex flex-col items-center">
 
           {/* Floating Glass Badge */}
           <motion.div
@@ -121,7 +122,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1, duration: 0.8, ease: "easeOut" }}
-            className="space-y-6 max-w-4xl"
+            className="space-y-6 max-w-screen-2xl"
           >
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.1]">
               Architecting <br className="hidden md:block" />
@@ -157,7 +158,7 @@ export default function Home() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto relative group">
               <div className="absolute -inset-1 bg-white/5 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
               <Button size="lg" variant="outline" asChild className="w-full sm:w-auto h-16 px-10 text-lg border-white/20 hover:border-white/50 relative bg-white/5 backdrop-blur-sm text-gray-300 hover:text-white hover:bg-white/10 font-medium tracking-wide">
-                <Link href="/contact">Book Consultation</Link>
+                <Link href="/contact">Book Free Consultation</Link>
               </Button>
             </motion.div>
           </motion.div>
@@ -201,7 +202,7 @@ export default function Home() {
       {/* Hire Dedicated Developers Section (SEO Keywords) */}
       <section className="py-24 bg-black/40 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+        <div className="container mx-auto px-4 md:px-6 max-w-screen-2xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -236,10 +237,10 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               {[
-                { label: "Hire E-commerce Devs", icon: <ShoppingCart className="w-8 h-8 text-blue-400 mb-4" /> },
-                { label: "Hire WordPress Devs", icon: <Code2 className="w-8 h-8 text-blue-400 mb-4" /> },
-                { label: "Hire Full-Stack Devs", icon: <ShieldCheck className="w-8 h-8 text-blue-400 mb-4" /> },
-                { label: "Hire Web Architects", icon: <Users className="w-8 h-8 text-blue-400 mb-4" /> }
+                { label: "Hire E-commerce Devs", icon: <ShoppingCart className="w-8 h-8 text-primary mb-4" /> },
+                { label: "Hire WordPress Devs", icon: <Code2 className="w-8 h-8 text-primary mb-4" /> },
+                { label: "Hire Full-Stack Devs", icon: <ShieldCheck className="w-8 h-8 text-primary mb-4" /> },
+                { label: "Hire Web Architects", icon: <Users className="w-8 h-8 text-primary mb-4" /> }
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
@@ -258,7 +259,7 @@ export default function Home() {
 
       {/* Specialized E-Commerce Solutions (SEO Keywords) */}
       <section className="py-24 relative bg-black/40 bg-background">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div className="container mx-auto px-4 md:px-6 max-w-screen-2xl">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -309,7 +310,7 @@ export default function Home() {
 
       {/* Global Reach Section (SEO Keywords) */}
       <section className="py-24 relative bg-black/40 bg-background">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div className="container mx-auto px-4 md:px-6 max-w-screen-2xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, rotateY: 15 }}
@@ -358,7 +359,7 @@ export default function Home() {
 
       {/* Services Snippet (Existing, updated to 3D) */}
       <section className="py-24 relative bg-black/40 bg-background">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div className="container mx-auto px-4 md:px-6 max-w-screen-2xl">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -366,7 +367,10 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Core Capabilities</h2>
+            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
+              Core Capabilities
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Services We Offer</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We specialize in creating comprehensive digital solutions tailored to your unique business needs and growth objectives.
             </p>
@@ -412,11 +416,210 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Technology Marquee Section */}
+      <section className="py-16 relative overflow-hidden bg-black/40 bg-background">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/3 to-transparent pointer-events-none" />
+
+        <div className="text-center mb-10 relative z-10">
+          <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground font-medium">Technologies We Work With</p>
+        </div>
+
+        {/* Row 1: Left to Right */}
+        <div className="relative overflow-hidden mb-4 before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-24 before:bg-gradient-to-r before:from-[#030D0A] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-24 after:bg-gradient-to-l after:from-[#030D0A] after:to-transparent">
+          <div className="flex animate-marquee-ltr whitespace-nowrap">
+            {[
+              { name: "React", icon: "react", color: "61DAFB" },
+              { name: "Next.js", icon: "nextdotjs", color: "FFFFFF" },
+              { name: "Node.js", icon: "nodedotjs", color: "5FA04E" },
+              { name: "TypeScript", icon: "typescript", color: "3178C6" },
+              { name: "WordPress", icon: "wordpress", color: "21759B" },
+              { name: "WooCommerce", icon: "woocommerce", color: "96588A" },
+              { name: "Docker", icon: "docker", color: "2496ED" },
+              { name: "MongoDB", icon: "mongodb", color: "47A248" },
+              { name: "GraphQL", icon: "graphql", color: "E535AB" },
+              { name: "Shopify", icon: "shopify", color: "96BF48" },
+              { name: "Figma", icon: "figma", color: "F24E1E" },
+              { name: "Vercel", icon: "vercel", color: "FFFFFF" },
+              { name: "NestJS", icon: "nestjs", color: "E0234E" },
+              { name: "Tailwind CSS", icon: "tailwindcss", color: "06B6D4" },
+              { name: "Shadcn UI", icon: "shadcnui", color: "FFFFFF" },
+              { name: "React", icon: "react", color: "61DAFB" },
+              { name: "Next.js", icon: "nextdotjs", color: "FFFFFF" },
+              { name: "Node.js", icon: "nodedotjs", color: "5FA04E" },
+              { name: "TypeScript", icon: "typescript", color: "3178C6" },
+              { name: "WordPress", icon: "wordpress", color: "21759B" },
+              { name: "WooCommerce", icon: "woocommerce", color: "96588A" },
+              { name: "Docker", icon: "docker", color: "2496ED" },
+              { name: "MongoDB", icon: "mongodb", color: "47A248" },
+              { name: "GraphQL", icon: "graphql", color: "E535AB" },
+              { name: "Shopify", icon: "shopify", color: "96BF48" },
+              { name: "Figma", icon: "figma", color: "F24E1E" },
+              { name: "Vercel", icon: "vercel", color: "FFFFFF" },
+              { name: "NestJS", icon: "nestjs", color: "E0234E" },
+              { name: "Tailwind CSS", icon: "tailwindcss", color: "06B6D4" },
+              { name: "Shadcn UI", icon: "shadcnui", color: "FFFFFF" },
+            ].map((tech, i) => (
+              <div
+                key={i}
+                className="inline-flex items-center gap-2.5 mx-4 px-5 py-2.5 rounded-full border border-white/8 bg-white/3 backdrop-blur-sm hover:border-white/20 hover:bg-white/5 transition-all cursor-default shrink-0"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`https://cdn.simpleicons.org/${tech.icon}/${tech.color}`}
+                  alt={tech.name}
+                  width={18}
+                  height={18}
+                  className="shrink-0 opacity-80"
+                />
+                <span className="text-sm font-medium text-white/70">{tech.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Row 2: Right to Left */}
+        <div className="relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-24 before:bg-gradient-to-r before:from-[#030D0A] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-24 after:bg-gradient-to-l after:from-[#030D0A] after:to-transparent">
+          <div className="flex animate-marquee-rtl whitespace-nowrap">
+            {[
+              { name: "AWS", icon: "amazonaws", color: "FF9900" },
+              { name: "Expo", icon: "expo", color: "FFFFFF" },
+              { name: "Appwrite", icon: "appwrite", color: "FD366E" },
+              { name: "Cloudinary", icon: "cloudinary", color: "3448C5" },
+              { name: "Hostinger", icon: "hostinger", color: "673DE6" },
+              { name: "BigCommerce", icon: "bigcommerce", color: "121118" },
+              { name: "PHP", icon: "php", color: "777BB4" },
+              { name: "MySQL", icon: "mysql", color: "4479A1" },
+              { name: "PostgreSQL", icon: "postgresql", color: "4169E1" },
+              { name: "Redis", icon: "redis", color: "FF4438" },
+              { name: "n8n", icon: "n8n", color: "EA4B71" },
+              { name: "Stripe", icon: "stripe", color: "635BFF" },
+              { name: "GitHub Actions", icon: "githubactions", color: "2088FF" },
+              { name: "Elementor", icon: "elementor", color: "92003B" },
+              { name: "JavaScript", icon: "javascript", color: "F7DF1E" },
+              { name: "AWS", icon: "amazonaws", color: "FF9900" },
+              { name: "Expo", icon: "expo", color: "FFFFFF" },
+              { name: "Appwrite", icon: "appwrite", color: "FD366E" },
+              { name: "Cloudinary", icon: "cloudinary", color: "3448C5" },
+              { name: "Hostinger", icon: "hostinger", color: "673DE6" },
+              { name: "BigCommerce", icon: "bigcommerce", color: "121118" },
+              { name: "PHP", icon: "php", color: "777BB4" },
+              { name: "MySQL", icon: "mysql", color: "4479A1" },
+              { name: "PostgreSQL", icon: "postgresql", color: "4169E1" },
+              { name: "Redis", icon: "redis", color: "FF4438" },
+              { name: "n8n", icon: "n8n", color: "EA4B71" },
+              { name: "Stripe", icon: "stripe", color: "635BFF" },
+              { name: "GitHub Actions", icon: "githubactions", color: "2088FF" },
+              { name: "Elementor", icon: "elementor", color: "92003B" },
+              { name: "JavaScript", icon: "javascript", color: "F7DF1E" },
+            ].map((tech, i) => (
+              <div
+                key={i}
+                className="inline-flex items-center gap-2.5 mx-4 px-5 py-2.5 rounded-full border border-white/8 bg-white/3 backdrop-blur-sm hover:border-white/20 hover:bg-white/5 transition-all cursor-default shrink-0"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`https://cdn.simpleicons.org/${tech.icon}/${tech.color}`}
+                  alt={tech.name}
+                  width={18}
+                  height={18}
+                  className="shrink-0 opacity-80"
+                />
+                <span className="text-sm font-medium text-white/70">{tech.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects Section */}
+      <section className="py-24 relative overflow-hidden bg-black/40 bg-background">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="container mx-auto px-4 md:px-6 max-w-screen-2xl relative z-10">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
+              Our Work
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Featured Projects</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              A selection of real-world platforms we've engineered — from global e-commerce stores to enterprise software solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.slice(0, 6).map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -6, scale: 1.02 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.08, type: "spring", bounce: 0.3 }}
+                className="h-full"
+              >
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block h-full group"
+                >
+                  <div className="h-full bg-[#0D0F14] border border-white/10 rounded-2xl p-6 flex flex-col gap-4 hover:border-primary/40 transition-all duration-300 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors duration-500" />
+
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="text-lg font-bold text-white leading-snug group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      <ArrowRight className="w-5 h-5 text-primary shrink-0 mt-0.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                    </div>
+
+                    <p className="text-sm text-[#8892B0] leading-relaxed flex-grow line-clamp-3">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 pt-2">
+                      {project.stack.slice(0, 3).map((tech, i) => (
+                        <span
+                          key={i}
+                          className="text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[#8892B0] group-hover:border-primary/20 transition-colors"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </a>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <Button size="lg" variant="outline" asChild className="h-14 px-10 text-lg border-white/20 bg-white/5 hover:bg-white/10 hover:border-primary/40 hover:text-white transition-all group">
+              <Link href="/projects">
+                View All Projects
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-24 relative bg-black/40 overflow-hidden bg-background">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+        <div className="container mx-auto px-4 md:px-6 max-w-screen-2xl relative z-10">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -435,7 +638,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="relative max-w-4xl mx-auto mt-12 mb-12 perspective-1000">
+          <div className="relative max-w-screen-2xl mx-auto mt-12 mb-12 perspective-1000">
             <motion.div
               initial={{ opacity: 0, y: 50, rotateX: 10 }}
               whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
@@ -507,7 +710,7 @@ export default function Home() {
 
       {/* FAQ Section */}
       <section className="py-24 relative bg-black/40">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div className="container mx-auto px-4 md:px-6 max-w-screen-2xl">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -547,7 +750,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden bg-black/40 bg-background">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+        <div className="container mx-auto px-4 md:px-6 max-w-screen-2xl relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

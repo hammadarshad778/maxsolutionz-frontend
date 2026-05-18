@@ -62,17 +62,17 @@ export function AnimatedBackground() {
       
       {/* Falling Snow Layers */}
       <div 
-        className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] opacity-80"
+        className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] opacity-20"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='300' height='300' viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231AECBB' fill-opacity='1'%3E%3Ccircle cx='20' cy='30' r='3'/%3E%3Ccircle cx='120' cy='110' r='2'/%3E%3Ccircle cx='220' cy='50' r='4'/%3E%3Ccircle cx='80' cy='210' r='2.5'/%3E%3Ccircle cx='250' cy='260' r='3'/%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='300' height='300' viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231AECBB' fill-opacity='0.4'%3E%3Ccircle cx='20' cy='30' r='3'/%3E%3Ccircle cx='120' cy='110' r='2'/%3E%3Ccircle cx='220' cy='50' r='4'/%3E%3Ccircle cx='80' cy='210' r='2.5'/%3E%3Ccircle cx='250' cy='260' r='3'/%3E%3C/g%3E%3C/svg%3E")`,
           backgroundSize: '300px 300px',
           animation: 'snowFall1 20s linear infinite'
         }}
       />
       <div 
-        className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] opacity-40"
+        className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] opacity-15"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231AECBB' fill-opacity='1'%3E%3Ccircle cx='40' cy='50' r='1.5'/%3E%3Ccircle cx='140' cy='20' r='1'/%3E%3Ccircle cx='90' cy='150' r='2'/%3E%3Ccircle cx='180' cy='130' r='1.5'/%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231AECBB' fill-opacity='0.3'%3E%3Ccircle cx='40' cy='50' r='1.5'/%3E%3Ccircle cx='140' cy='20' r='1'/%3E%3Ccircle cx='90' cy='150' r='2'/%3E%3Ccircle cx='180' cy='130' r='1.5'/%3E%3C/g%3E%3C/svg%3E")`,
           backgroundSize: '200px 200px',
           animation: 'snowFall2 35s linear infinite'
         }}

@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="container px-4 py-32 md:py-48 max-w-4xl mx-auto min-h-screen">
+    <div className="container px-4 py-32 md:py-48 max-w-screen-2xl mx-auto min-h-screen">
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white">
           Privacy Policy

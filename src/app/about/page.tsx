@@ -45,7 +45,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl space-y-8"
+          className="max-w-screen-2xl space-y-8"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -67,7 +67,7 @@ export default function AboutPage() {
 
       {/* Story Section */}
       <section className="py-24 bg-muted/30 relative">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div className="container mx-auto px-4 md:px-6 max-w-screen-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -107,7 +107,7 @@ export default function AboutPage() {
 
       {/* Values Section */}
       <section className="py-32 relative">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div className="container mx-auto px-4 md:px-6 max-w-screen-2xl">
           <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
