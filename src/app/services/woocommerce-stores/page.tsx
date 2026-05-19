@@ -32,7 +32,7 @@ export default function WooCommerceStoresPage() {
   return (
     <div className="flex flex-col min-h-screen pt-24 pb-16">
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent -z-10" />
+        <div className="absolute inset-0 bg-linear from-primary/10 to-transparent -z-10" />
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
