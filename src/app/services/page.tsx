@@ -41,7 +41,7 @@ export default function ServicesPage() {
     <div className="flex flex-col min-h-screen pt-24 pb-16">
       {/* Header Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent -z-10" />
+        <div className="absolute inset-0 bg-linear from-primary/10 to-transparent -z-10" />
         <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
