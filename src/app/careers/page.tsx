@@ -2,6 +2,7 @@
 
 import { useQueryState, parseAsString } from "nuqs";
 import { motion, AnimatePresence } from "framer-motion";
+import { Suspense } from "react";
 import { ArrowRight, Briefcase, MapPin, Clock, DollarSign, Users, TrendingUp, CheckCircle2, Star } from "lucide-react";
 import { jobs, type Job } from "@/data/jobs";
 import Link from "next/link";
@@ -114,7 +115,7 @@ function JobCard({ job, index }: { job: Job; index: number }) {
   );
 }
 
-export default function CareersPage() {
+function CareersPageClient() {
   const [dept, setDept] = useQueryState("dept", parseAsString.withDefault("All"));
   const [location, setLocation] = useQueryState("location", parseAsString.withDefault("All"));
   const [type, setType] = useQueryState("type", parseAsString.withDefault("All"));
@@ -325,5 +326,13 @@ export default function CareersPage() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function CareersPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <CareersPageClient />
+    </Suspense>
   );
 }

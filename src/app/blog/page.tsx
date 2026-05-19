@@ -2,6 +2,7 @@
 
 import { useQueryState, parseAsString } from "nuqs";
 import { motion, AnimatePresence } from "framer-motion";
+import { Suspense } from "react";
 import { Search, BookOpen, Eye, Users, Tag, ArrowRight } from "lucide-react";
 import { blogPosts, blogCategories } from "@/data/blog-posts";
 import Link from "next/link";
@@ -113,7 +114,7 @@ function BlogCard({ post, index }: { post: (typeof blogPosts)[0]; index: number 
 }
 
 
-export default function BlogPage() {
+export function BlogPageClient() {
   const [category, setCategory] = useQueryState(
     "category",
     parseAsString.withDefault("All")
@@ -295,5 +296,13 @@ export default function BlogPage() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function BlogPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <BlogPageClient />
+    </Suspense>
   );
 }
