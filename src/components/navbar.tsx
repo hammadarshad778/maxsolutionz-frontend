@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Button } from './ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Zap } from 'lucide-react';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -64,12 +64,9 @@ export function Navbar() {
             })}
           </div>
           
-          <div className="hidden md:flex items-center gap-4">
-            <Button variant="outline" asChild className="rounded-full border-white/20 hover:bg-white/10 text-white transition-all duration-300">
-              <Link href="/contact">Book Free Consultation</Link>
-            </Button>
-            <Button asChild className="rounded-full bg-primary text-primary-foreground shadow-md shadow-primary/20 hover:shadow-primary/40 hover:scale-105 transition-all duration-300">
-              <Link href="/contact">Get a Quote</Link>
+          <div className="hidden md:flex items-center">
+            <Button asChild className="rounded-full bg-primary text-primary-foreground shadow-md shadow-primary/20 hover:shadow-primary/40 hover:scale-105 transition-all duration-300 gap-2">
+              <Link href="/contact" className="flex items-center gap-2"><Zap className="w-4 h-4" />Let&apos;s Connect</Link>
             </Button>
           </div>
 
@@ -108,22 +105,13 @@ export function Navbar() {
                 );
               })}
               <div className="flex flex-col gap-3 mt-8">
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  asChild 
-                  className="rounded-xl h-14 text-lg w-full border-white/20 text-white hover:bg-white/10"
+                <Button
+                  size="lg"
+                  asChild
+                  className="rounded-xl h-14 text-lg w-full bg-primary text-primary-foreground shadow-lg shadow-primary/20 gap-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <Link href="/contact">Book Free Consultation</Link>
-                </Button>
-                <Button 
-                  size="lg" 
-                  asChild 
-                  className="rounded-xl h-14 text-lg w-full bg-primary text-primary-foreground shadow-lg shadow-primary/20"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <Link href="/contact">Get a Quote</Link>
+                  <Link href="/contact" className="flex items-center gap-2"><Zap className="w-5 h-5" />Let&apos;s Connect</Link>
                 </Button>
               </div>
             </div>
