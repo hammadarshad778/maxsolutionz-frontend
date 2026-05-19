@@ -165,20 +165,7 @@ export default function Home() {
 
         </div>
 
-        {/* Floating Abstract 3D Element behind text */}
-        <motion.div
-          animate={{
-            y: [-20, 20, -20],
-            rotateZ: [0, 5, 0],
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute right-[-5%] top-[20%] opacity-20 pointer-events-none -z-10 hidden lg:block"
-        >
-          <div className="w-64 h-64 border border-primary/30 rounded-full flex items-center justify-center relative">
-            <div className="w-48 h-48 border border-blue-500/30 rounded-full" />
-            <div className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent rotate-45" />
-          </div>
-        </motion.div>
+
 
         {/* Scroll Indicator */}
         <motion.div

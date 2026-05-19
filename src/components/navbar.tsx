@@ -17,6 +17,8 @@ export function Navbar() {
     { href: '/about', label: 'About Us' },
     { href: '/services', label: 'Services' },
     { href: '/projects', label: 'Projects' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/careers', label: 'Careers' },
     { href: '/faq', label: 'FAQs' },
   ];
 

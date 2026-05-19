@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { AnimatedBackground } from "@/components/animated-background";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,9 +25,11 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen flex flex-col bg-transparent text-foreground relative`} suppressHydrationWarning>
         <AnimatedBackground />
         <Navbar />
-        <main className="flex-1 relative z-10">
-          {children}
-        </main>
+        <NuqsAdapter>
+          <main className="flex-1 relative z-10">
+            {children}
+          </main>
+        </NuqsAdapter>
         <Footer />
         <Analytics />
         <SpeedInsights />
