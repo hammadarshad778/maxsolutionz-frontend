@@ -88,7 +88,7 @@ export default function ProjectsPage() {
                             <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium w-fit mb-6">
                               {project.role}
                             </div>
-                            <h3 className="text-3xl font-bold mb-4">{project.title.replace(/\s*\((USA|Germany|Pakistan|Ukraine|Europe|UK)\)$/, '')}</h3>
+                            <h3 className="text-3xl font-bold mb-4" style={{ color: '#46B8F4' }}>{project.title.replace(/\s*\((USA|Germany|Pakistan|Ukraine|Europe|UK)\)$/, '')}</h3>
                             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                               {project.description}
                             </p>
@@ -111,7 +111,7 @@ export default function ProjectsPage() {
                           
                           <div className="md:col-span-12 lg:col-span-7 bg-black/40 rounded-2xl p-6 md:p-8 border border-white/5 group-hover:bg-black/30 transition-colors duration-500 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/20 transition-colors duration-500" />
-                            <h4 className="text-xl font-semibold mb-6 flex items-center gap-2 relative z-10">
+                            <h4 className="text-xl font-semibold mb-6 flex items-center gap-2 relative z-10" style={{ color: '#46B8F4' }}>
                               Key Solutions Implemented
                             </h4>
                             <ul className="space-y-4">
